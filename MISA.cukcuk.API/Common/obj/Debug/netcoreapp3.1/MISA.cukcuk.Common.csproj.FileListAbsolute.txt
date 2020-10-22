@@ -1,0 +1,9 @@
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.deps.json
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.AssemblyInfoInputs.cache
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.AssemblyInfo.cs
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csproj.CoreCompileInputs.cache
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csprojAssemblyReference.cache

@@ -1,0 +1,318 @@
+/* cửa sổ dialog thông tin chi tiết */
+
+.base-modal {
+    /* display: none;*/
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.base-modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.5;
+}
+
+.base-modal-body {
+    width: 900px;
+    /*min-height: 200px;*/
+    background-color: #0072bc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 5px;
+    border-radius: 4px;
+    resize:both;
+    overflow:hidden;
+}
+
+    .base-modal-body .body-top {
+        background: transparent;
+        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 30px;
+    }
+
+    .base-modal-body .body-form {
+        width: 100%;
+        padding-top: 10px;
+        
+        height: calc(100% - 40px);
+        background-color: #ffffff;
+    }
+
+.body-top .body-title {
+    margin: 0;
+    padding: 0 2px;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.body-top .body-btn-exit {
+    width: 20px;
+    height: 20px;
+    background-image: url(/content/img/cancel.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+    .body-top .body-btn-exit:hover {
+        background-color: #0199fb;
+    }
+
+.base-modal .row {
+    display: flex;
+    width: calc(100% - 10px);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+    margin: 5px 0px;
+    flex-wrap: wrap;
+}
+.base-modal .col-4 {
+    width:40%;
+    display: flex;
+    /*justify-content: space-between;*/
+}
+.base-modal .col-5 {
+    width: 50%;
+    display: flex;
+}
+.base-modal .col-6 {
+    width: 60%;
+    display: flex;
+}
+.base-modal .col-8 {
+    width: 80%;
+    display: flex;
+}
+
+.base-modal .col-2 {
+    width: 20%;
+    display: flex;
+}
+
+.base-modal-body label {
+    padding: 0 10px;
+    line-height: 30px;
+    font-weight: 300;
+    width: 120px;
+}
+
+label strong {
+    color: #fb0101;
+}
+
+.base-modal-body input {
+    height: 24px;
+    padding: 1px 4px;
+}
+.base-modal-body select {
+    height: 27px;
+    padding: 1px 2px;
+}
+
+.row input, textarea, select {
+    width: calc(100% - 150px);
+    border: 1px solid #b3b3b3;
+    cursor: text;
+}
+.row select {
+    width: calc(100% - 140px);
+    border: 1px solid #b3b3b3;
+    cursor: text;
+}
+
+    .row input:focus, textarea:focus, select:focus {
+        border: 1px solid #0199fb;
+        outline: none;
+    }
+
+.row.note {
+    height: 50px;
+}
+
+.row textarea {
+    height: 44px;
+}
+
+
+.required-error, .required-error:focus {
+    border: 1px solid #fb0101 !important;
+}
+
+
+
+.base-modal-body .body-button {
+    display: flex;
+    justify-content: space-between;
+    height: 28px;
+    margin: 20px 10px 0px 8px;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.body-button .button-group-item {
+    height: 100%;
+    background-color: transparent;
+    /* display: flex;
+    align-items: center;*/
+    padding: 0 5px;
+    border: 1px solid #b3b3b3;
+    border-radius: 2px;
+    /* cursor: pointer ; */
+}
+
+.body-button .button-help {
+    width: 70px;
+}
+
+.body-button p {
+    margin: 0 4px;
+    line-height: 28px;
+}
+
+.body-button .button-icon {
+    width: 20px;
+    height: 16px;
+    background-image: url(/content/img/IconSprite.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon.help-icon {
+    background-position-y: -1504px;
+}
+
+.body-button .button-group {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button-group .button-save {
+    width: 70px;
+    margin-right: 10px;
+}
+
+.button-group .button-add {
+    width: 120px;
+    margin-right: 10px;
+}
+
+.button-group .button-cancel {
+    width: 84px;
+}
+
+.button-icon.save-icon {
+    background-position: -1px -768px;
+}
+
+.button-icon.add-icon {
+    background-position: 0px -737px;
+}
+
+.button-icon.cancel-icon {
+    background-position: 0px -1952px;
+}
+
+input[type=radio] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.inputRadio {
+    align-items: center;
+}
+
+    .inputRadio label {
+        cursor: pointer;
+    }
+
+    .inputRadio .gender {
+        width: 61%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+/* heading  */
+.base-mode-heading {
+    font-weight: bold;
+    border-bottom: 1px solid #b3b3b3;
+    width: 100%;
+    margin: 5px 0px 5px 10px;
+    padding-bottom: 5px;
+}
+
+
+/*upload avatar*/
+
+.avatar-wrapper {
+    width: 170px;
+    height: 170px;
+    background-image: url(/content/img/avatardefault.png);
+    background-size:cover;
+}
+.upload-avatar{
+    
+    flex-direction:column;
+    
+    
+}
+.avatar-tooltip p{
+    text-align:center;
+}
+#upload-avatar{
+    opacity:0;
+}
+.button-avatar{
+    display:flex;
+    justify-content:space-evenly;
+    margin-top:100px;
+}
+.button-avatar label,.button-avatar div{
+    height:20px;
+    width:40px;
+    background-color: #ffffff;
+    line-height:15px;
+    padding:0;
+    cursor:pointer;
+    text-align:center;
+
+}
+.button-avatar div {
+    background-color: #e3e4e6;
+    line-height: 18px;
+    color: #dc0505;
+    font-weight: bold;
+}
+/*css cho hộp thoại thông báo lỗi */
+.message-error {
+    height: 150px;
+    width: 350px;
+}
+
+.message-error .list-button {
+    margin-top: 35px;
+    justify-content: flex-end;
+}
+
+.message-error button {
+    border: 1px solid #b3b3b3;
+    height: 25px;
+    min-width: 50px;
+    margin-left: 20px;
+}
+#err-label{
+    width:auto;
+}

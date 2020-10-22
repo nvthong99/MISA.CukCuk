@@ -1,0 +1,12 @@
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csprojAssemblyReference.cache
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.AssemblyInfoInputs.cache
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.AssemblyInfo.cs
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.deps.json
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csproj.CopyComplete
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csproj.CoreCompileInputs.cache

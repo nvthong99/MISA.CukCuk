@@ -1,0 +1,238 @@
+﻿
+/*  css cho header */
+.content .content-navbar {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-navbar .title {
+    display: flex;
+    align-items: baseline;
+}
+
+.title .title-1 {
+    font-weight: 300;
+    margin: 0;
+    padding: 0 15px 0 0;
+    font-size: 22px;
+}
+
+.title .title-2 {
+    font-weight: 300;
+    color: #0199fb;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+    .title .title-2 i {
+        margin-right: 10px;
+    }
+
+.content-navbar-btn {
+    height: 28px;
+    display: flex;
+}
+
+    .content-navbar-btn .come-back, .feedback {
+        height: 100%;
+        border: 1px solid #b3b3b3;
+        border-radius: 2px;
+        outline: none;
+        cursor: pointer;
+        line-height: 28px;
+        padding: 0 10px;
+        margin-left: 20px;
+    }
+
+    .content-navbar-btn .feedback {
+        background-image: url(/content/img/viewEmail.png);
+        background-repeat: no-repeat;
+        padding-left: 30px;
+        background-position: 12px 4px;
+    }
+
+
+.content .content-box {
+    height: calc(100% - 50px);
+    border: 1px solid #b3b3b3;
+}
+
+
+/* css cho bảng thông tin nhân viên */
+.content-box .content-table {
+    overflow: scroll;
+    width: 100%;
+    height: calc(100% - 55px);
+}
+
+    .content-box .content-table table {
+        border-collapse: collapse;
+        /* width: 1800px; */
+        min-width: 1457px;
+        border-top-color: transparent;
+    }
+
+    .content-box .content-table td, th {
+        border: 1px solid #b3b3b3;
+        cursor: pointer;
+        border-top: none;
+        border-left: none;
+    }
+
+    .content-box .content-table table td {
+        padding: 4px 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+.content-table table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.content-box .content-table table tbody tr:hover {
+    background-color: #9bc7e366;
+}
+
+.content-box .content-table table th {
+    height: 35px;
+    background-color: #ededed;
+}
+
+.tr-selected {
+    background-color: #1888d0ad !important;
+}
+
+
+/* css width cho table */
+/* Mã Nhân viên*/
+.content-table table tr td.employee-code {
+    max-width: 150px;
+}
+
+.content-table table tr th.employee-code {
+    width: 150px;
+}
+
+/* Tên nhân viên */
+.content-table table tr td.employee-name {
+    max-width: 240px;
+}
+
+.content-table table tr th.employee-name {
+    width: 240px;
+}
+
+/*Giới tính*/
+
+.content-table table tr td.gender {
+    max-width: 140px;
+    text-align: left;
+}
+
+.content-table table tr th.gender {
+    width: 140px;
+}
+
+/* Ngày sinh */
+
+.content-table table tr td.date-of-birth {
+    max-width: 140px;
+    text-align: center;
+}
+
+.content-table table tr th.date-of-birth {
+    width: 140px;
+}
+
+/* Số điện thoại */
+
+.content-table table tr td.phone-number {
+    max-width: 140px;
+    text-align: left;
+}
+
+.content-table table tr th.phone-number {
+    width: 140px;
+}
+/* Email */
+
+.content-table table tr td.email {
+    max-width: 300px;
+}
+
+.content-table table tr th.email {
+    width: 300px;
+}
+/* vị trí */
+
+.content-table table tr td.position {
+    max-width: 200px;
+}
+
+.content-table table tr th.position {
+    width: 200px;
+}
+/* Phòng ban*/
+
+.content-table table tr td.department {
+    max-width: 300px;
+}
+
+.content-table table tr th.department {
+    width: 300px;
+}
+
+/* tiền */
+
+.content-table table tr td.salary {
+    max-width: 210px;
+    text-align: right;
+}
+
+.content-table table tr th.salary {
+    width: 210px;
+}
+/* tình trạng công việc */
+
+.content-table table tr td.work-status {
+    max-width: 170px;
+    text-align: left;
+}
+
+.content-table table tr th.work-status {
+    width: 180px;
+}
+/* responsive */
+
+@media screen and (max-width: 1024px) {
+    .sidebar, .main {
+        position: relative;
+    }
+
+        .sidebar .logo {
+            border-bottom: none;
+        }
+
+    .menu {
+        /* position: absolute;
+        top:50px;
+        left: -200px; */
+        transform: translate(-200px, 0px);
+        transition: 1s;
+    }
+
+    .content {
+        /* position: relative;
+        top: 0px;
+        left: -200px; */
+        transform: translateX(-200px);
+        width: calc(100vw - 20px) !important;
+        transition: 1s;
+    }
+}

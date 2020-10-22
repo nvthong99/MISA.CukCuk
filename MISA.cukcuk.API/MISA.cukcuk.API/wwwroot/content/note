@@ -1,0 +1,2 @@
+- chuyển ngày sinh về dạng Date
+- phải validate ở cả client và sever vì hacker có thể sửa thông tin trước khi gửi về cho sever

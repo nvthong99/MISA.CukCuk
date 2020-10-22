@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\MISA.cukcuk.Common.csproj" />
+    <ProjectReference Include="..\DBAccess\MISA.cukcuk.DBAccess.csproj" />
+  </ItemGroup>
+
+</Project>

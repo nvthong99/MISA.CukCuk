@@ -1,0 +1,73 @@
+.content-box .content-toolbar{
+    display: flex;
+    margin: 0;
+    padding: 1px 1px;
+    background-color: #ededed;
+    background-image: -webkit-linear-gradient(top,#f9f9f9, #e3e4e6);
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.content-toolbar .content-item{
+    padding: 0 5px;
+    height: 23px ;
+
+}
+
+.content-item .content-item-icon{
+    height:18px;
+    width: 20px;
+    background-image: url(/content/img/IconSprite.png);
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    background-position-x: 2px;
+}
+
+.content-item-icon.icon-add {
+    width: 16px;
+    height: 20px;
+    background-position: 0 -2512px;
+}
+
+.content-item-icon.icon-copy {
+    width: 14px;
+    height: 15px;
+    background-position: -1px -1888px;
+}
+
+.content-item-icon.icon-edit {
+    background-image: url(/content/img/Edit16.png);
+    width: 15px;
+    height: 15px;
+}
+.content-item-icon.icon-delete {
+    width: 12px;
+    height: 11px;
+    background-position: -2px -2683px;
+}
+
+.content-item-icon.icon-update {
+    background-position: 0 -2586px;
+    width: 16px;
+    height: 13px;
+}
+
+.content-item-icon.icon-import {
+    width: 16px;
+    height: 16px;
+    background-position: 0 -1824px;
+}
+
+.content-item-icon.icon-export {
+    width: 16px;
+    height: 16px;
+    background-position: 0 -1824px;
+}
+.content-item-icon.icon-merge { 
+    background-position-y: -2052px;
+    background-size: 90%;
+}
+.content-item-icon.icon-help {
+    background-position: 0 -1600px;
+    width: 16px;
+    height: 16px;
+}

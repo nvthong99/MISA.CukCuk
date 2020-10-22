@@ -1,0 +1,240 @@
+﻿
+/*  css cho header */
+.content .content-navbar{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content-navbar .title{
+    display: flex;
+    align-items: baseline;
+}
+
+.title .title-1{
+    font-weight: 300;
+    margin: 0;
+    padding: 0 15px 0 0;
+    font-size: 22px;
+}
+
+.title .title-2{
+    font-weight: 300;
+    color: #0199fb;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+.title .title-2 i{
+    margin-right: 10px;
+}
+
+.content-navbar-btn{
+    height: 28px;
+    display: flex;
+}
+
+.content-navbar-btn .come-back,.feedback{
+    height: 100%;
+    border: 1px solid #b3b3b3;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    line-height: 28px;
+    padding: 0 10px;
+    margin-left: 20px;
+}
+
+.content-navbar-btn .feedback {
+    background-image: url(/content/img/viewEmail.png);
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    background-position: 12px 4px;
+}
+
+
+.content .content-box {
+    
+    height: calc(100% - 50px);
+    border: 1px solid #b3b3b3;
+}
+
+
+/* css cho bảng thông tin khách hàng */
+.content-box .content-table{
+    overflow: scroll;
+    width: 100%;
+    height: calc(100% - 55px);
+
+}
+
+.content-box .content-table table{
+    border-collapse: collapse;
+    /* width: 1800px; */
+    min-width: 1457px;
+    border-top-color: transparent ;
+}
+
+.content-box .content-table td, th {
+        border: 1px solid #b3b3b3;
+        cursor: pointer;
+        border-top: none;
+        border-left: none;
+}
+
+.content-box .content-table table td{
+    padding: 4px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.content-table table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.content-box .content-table table tbody tr:hover {
+    background-color: #9bc7e366;
+}
+.content-box .content-table table th{
+    height: 35px;
+    background-color: #ededed;
+}
+
+.tr-selected {
+    background-color: #1888d0ad !important;
+}
+
+
+/* css width cho table */
+/* Mã khách hàng */
+.content-table table tr th:nth-child(1){ 
+    width: 150px;
+}
+.content-table table tr td:nth-child(1){ 
+    max-width: 150px;
+}
+/* Tên khách hàng */
+.content-table table tr th:nth-child(2){ 
+    width: 240px;
+}
+.content-table table tr td:nth-child(2){ 
+    max-width: 240px;
+}
+/* Tên công ty */
+.content-table table tr th:nth-child(3){ 
+    width: 330px;
+}
+.content-table table tr td:nth-child(3){ 
+    max-width: 330px;
+}
+/* mã số thuế */
+.content-table table tr th:nth-child(4){ 
+    width: 150px;
+    
+}
+.content-table table tr td:nth-child(4){ 
+    max-width: 150px;
+    text-align: left;
+}
+/* Địa chỉ */
+.content-table table tr th:nth-child(5){ 
+    width: 320px;
+}
+.content-table table tr td:nth-child(5){ 
+    max-width: 320px;
+}
+/* Số điện thoại */
+.content-table table tr th:nth-child(6){ 
+    width: 170px;
+    
+}
+.content-table table tr td:nth-child(6){ 
+    max-width: 170px;
+    text-align: left;
+}
+/* Email */
+.content-table table tr th:nth-child(7){ 
+    width: 280px;
+}
+.content-table table tr td:nth-child(7){ 
+    max-width: 280px;
+}
+/* Ngày sinh */
+.content-table table tr th:nth-child(8){ 
+    width: 170px;
+}
+.content-table table tr td:nth-child(8){ 
+    max-width: 170px;
+    text-align: center;
+}
+/* tiền */
+.content-table table tr th:nth-child(9){ 
+    width: 170px;
+}
+.content-table table tr td:nth-child(9){ 
+    max-width: 170px;
+    text-align: right;
+}
+/*Giới tính*/
+.content-table table tr th:nth-child(10) {
+    width: 170px;
+}
+
+.content-table table tr td:nth-child(10) {
+    max-width: 170px;
+    text-align: center;
+}
+/* responsive */
+
+@media screen and (max-width: 1024px){
+    .sidebar, .main{
+        position: relative;
+    }
+    .sidebar .logo{
+        border-bottom: none;
+    }
+
+    .menu{
+        /* position: absolute;
+        top:50px;
+        left: -200px; */
+        transform: translate(-200px, 0px);
+        transition: 1s;
+    }
+    .content{
+        /* position: relative;
+        top: 0px;
+        left: -200px; */
+        transform: translateX(-200px);
+        width: calc(100vw - 20px) !important;
+        transition: 1s;
+    }
+
+
+  }
+
+
+/*chỉnh sửa jquery ui*/
+
+.ui-widget-header {
+    background: none
+}
+.ui-widget-content a {
+    cursor: pointer;
+}
+.ui-datepicker {
+
+    width: 232px;
+}
+
+    .ui-datepicker .ui-datepicker-title select {
+        margin: 1px 4px;
+    }
+.ui-widget.ui-widget-content {
+    border: 1px solid #b3b3b3;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: 1px solid #b3b3b3;
+    font-weight: bold;
+    
+}

@@ -1,0 +1,261 @@
+{
+  "format": 1,
+  "restore": {
+    "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj": {}
+  },
+  "projects": {
+    "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj",
+        "projectName": "MISA.cukcuk.Common",
+        "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj",
+        "packagesPath": "C:\\Users\\Thong\\.nuget\\packages\\",
+        "outputPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Thong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj",
+        "projectName": "MISA.cukcuk.DBAccess",
+        "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj",
+        "packagesPath": "C:\\Users\\Thong\\.nuget\\packages\\",
+        "outputPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\DBAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Thong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
+                "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj",
+        "projectName": "MISA.cukcuk.API",
+        "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj",
+        "packagesPath": "C:\\Users\\Thong\\.nuget\\packages\\",
+        "outputPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Thong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
+                "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
+              },
+              "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj": {
+                "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.9, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.21, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj",
+        "projectName": "MISA.cukcuk.Bussiness",
+        "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj",
+        "packagesPath": "C:\\Users\\Thong\\.nuget\\packages\\",
+        "outputPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Thong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
+                "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
+              },
+              "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj": {
+                "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

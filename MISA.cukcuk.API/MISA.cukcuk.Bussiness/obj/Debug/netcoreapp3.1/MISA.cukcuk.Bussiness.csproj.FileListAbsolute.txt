@@ -1,0 +1,14 @@
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.deps.json
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.dll
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.pdb
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csprojAssemblyReference.cache
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.AssemblyInfoInputs.cache
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.AssemblyInfo.cs
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csproj.CoreCompileInputs.cache
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csproj.CopyComplete
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.dll
+W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.pdb

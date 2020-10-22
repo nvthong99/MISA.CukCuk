@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PXAthmJMpadHleBgpnyIzAlxa+2c8YjkKbwHZGIYvMm/7KJYg7VvhDXN1OaGIA0EzalFNA80J/Vjn3lJw2RIvw==",
+  "success": true,
+  "projectFilePath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\DatabaseAccess\\DatabaseAccess.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Thong\\.nuget\\packages\\fsharp.core\\4.7.2\\fsharp.core.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}
