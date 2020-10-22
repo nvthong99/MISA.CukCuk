@@ -18,34 +18,50 @@ class baseJS {
         }
 
     }
-
+    //#region Khởi tạo sự kiện
     /**
      * Khởi tạo sự kiện cho trang 
      * author: nvThong ( 27/09/2020)
      */
     initEvents() {
-        $(".body-btn-exit").click(this.btnExitOnclick.bind(this));
-        $("#cancel").click(this.btnExitOnclick.bind(this));
+        // sự kiện click nút thêm trên toolbar
         $("#add-btn").click(this.btnAddOnclick.bind(this));
-        $('#dialog-btn-save').click(this.bttSaveOnClick.bind(this));
+        //sự kiện cho nút sửa trên toolbar
+        $('#edit-btn').click(this.btnEditOnclick.bind(this));
+        //sự kiện cho nút xóa trên toolbar
+        $('#delete-btn').click(this.btnDeleteOnclick.bind(this));
+        // sự kiện cho nút nhân bản trên toolbar
+        $('#copy-btn').click(this.btnCopyOnClick.bind(this));
+        // sự kiện click nút nạp trên toolbar
         $('#reload-table').click(this.btnReloadOnclick.bind(this));
-        $('#tbListData').on('click', 'tr', function () {
+        // sự kiện click nút exit trên dialog
+        $(".body-btn-exit").click(this.btnExitOnclick.bind(this));
+        // sự kiện click nút hủy bỏ trên dialog
+        $("#cancel").click(this.btnExitOnclick.bind(this));
+        // sự kiện khi click nút cất trên dialog
+        $('#dialog-btn-save').click(this.bttSaveOnClick.bind(this));
+
+        // sự kiện click nút cất và thêm trên dialog
+        $('#save-and-add').click(function () { console.log('click  cat va them') })
+        // sự kiện blur để validate cho các input có thuộc tính required
+        $('input[required]').blur(this.validate);
+        // sự kiện khi click vào hàng để sửa và xóa
+        $('#tbListData').on('click', 'tr', function (e) {
             if ($(this).hasClass('tr-selected')) {
                 $(this).removeClass('tr-selected');
             }
             else {
-                $(this).siblings().removeClass('tr-selected');
                 $(this).addClass('tr-selected')
             }
-
+            if (!e.ctrlKey) $(this).siblings().removeClass('tr-selected');
         })
-        $('#save-and-add').click(function () { console.log('click  cat va them')})
-        $('input[required]').blur(this.validate);
-        $('#delete-btn').click(this.btnDeleteOnclick.bind(this));
-        $('#edit-btn').click(this.btnEditOnclick.bind(this));
+        //sự kiện cho nút đồng ý/có trên dialog cảnh báo
         $('#err-ok').click(this.btnOkErrorOnClick.bind(this));
+        //sự kiện cho nút hủy/không trên dialog cảnh báo
         $('#err-cancel').click(this.btnCancelErrorOnClick.bind(this));
-        $('#copy-btn').click(this.btnCopyOnClick.bind(this));
+
+
+        // xử lý phím tắt cho dialog
         $('.base-modal').keydown(function (e) {
             
             if (e.ctrlKey && e.which == 83) {
@@ -56,7 +72,7 @@ class baseJS {
             else if (e.which == 27) $(".body-btn-exit").click();
             
         });
-
+        $('input[format = "currency"]').on('input change',this.autoFormatInputMoney);
         // format cho unput type date
         //#region TODO: sử dụng datepicker cho ô nhập ngày tháng năm
         //TODO: sử dụng datepicker cho ô nhập ngày tháng năm
@@ -85,6 +101,9 @@ class baseJS {
 
         //#endregion
     }
+    //#endregion
+
+    //#region lấy url api để gửi request
     /**
      * hàm lấy url  data
      * author: nvthong ( 28/09/2020)
@@ -93,9 +112,9 @@ class baseJS {
     getUrlData() {
         return;
     }
+    //#endregion
 
-
-
+    //#region Load dữ liệu lên trang web
     /**
      * load dữ liệu lên trang web
      * author: nvthong ( 27/09/2020)
@@ -131,7 +150,7 @@ class baseJS {
                         var className = $(field).attr('class');
                         var title = item[fieldName];
                         // tạo thẻ <td> với những trường dữ liệu cần show cho người dùng
-                        var td = $(`<td ${className} title = " ` + title + ` " >` + (value || "") + `</td>`);
+                        var td = $(`<td class = "${className}" title = " ` + title + ` " >` + (value || "") + `</td>`);
 
                         $(tr).append(td);// thêm vào thẻ <tr>
 
@@ -151,7 +170,9 @@ class baseJS {
 
     }
 
-    //#region format dữ liệu
+    //#endregion
+
+    //#region format dữ liệu trước khi load
 
     /**
      * format dữ liệu 
@@ -169,11 +190,7 @@ class baseJS {
                     return data.formatDate();
                     break;
                 case "money":
-                    return data.formatMoney();
-                    break;
-                case "gender":
-                    if (data == 1) return 'Nam';
-                    else return 'Nữ';
+                    return format.currency(data);
                     break;
                 default:
                     return data;
@@ -184,6 +201,19 @@ class baseJS {
         }
 
     }
+    /**
+   * Tự động format tiền tệ trong ô nhập liệu\
+   * author: NVThong (22/10/2020)
+   * 
+   * */
+
+    autoFormatInputMoney() {
+        var value = $(this).val().replaceAll(/\D/g, '');
+        value = format.currency(value);
+        $(this).val(value);
+
+    }
+
     //#endregion
 
     //#region sự kiện của các button
@@ -214,7 +244,14 @@ class baseJS {
     btnReloadOnclick() {
         this.loadData();
     }
-
+    /**
+  * hàm xử lý sự kiện cho nút nhân bản
+  * author: nvthong (21/10/2020)
+  * */
+    btnCopyOnClick() {
+        this.btnEditOnclick();
+        this.state = 'add';
+    }
     // #endregion
 
     //#region Thêm thông tin khách hàng
@@ -272,7 +309,7 @@ class baseJS {
 
                         // chuyển dữ liệu của field về dữ liệu trùng với DB
 
-                        var dataType = $(field).attr('dataType');
+                        var dataType = $(field).attr('format');
                         switch (dataType) {
                             case 'number':
                                 value = parseInt(value) || 0;
@@ -280,6 +317,8 @@ class baseJS {
                             case 'Date':
                                 value = $(field).datepicker('getDate');
                                 break;
+                            case 'currency':
+                                value = value.toString().replaceAll('.', '');
                         }
                       
                         dataForm[fieldName] = value;
@@ -310,7 +349,18 @@ class baseJS {
                 // cất dữ liệu vào database
             }
             else {
-                self.showMessageError('Bạn điền thiếu thông tin');
+                debugger
+                var warningContent ='';
+                var labels = $('#dialog-employee label')
+                $.each(labels, function (index, label) {
+                    var idInput = '#' + label.htmlFor;
+                    if ($(idInput).hasClass('required-error')) {
+                        warningContent += ', ' + label.title; 
+                    }
+                })
+                warningContent = warningContent.replace(/^(, )/, '');
+                warningContent += ' không được để trống.'
+                self.showMessageError(warningContent);
             }
 
         }
@@ -549,14 +599,7 @@ class baseJS {
         return false;
     }
     //#endregion
-    /**
-     * hàm xử lý sự kiện cho nút nhân bản
-     * author: nvthong (21/10/2020)
-     * */
-    btnCopyOnClick() {
-        this.btnEditOnclick();
-        this.state = 'add';
-    }
+    
     /**
      * hàm validate cho các ô nhập liệu có thuộc tính required khi blur
      * author : nvthong ( 25/09/2020)
@@ -565,18 +608,7 @@ class baseJS {
     validate() {
         validateForm.inputRequired(this);
     }
-
-    /**
-     * hàm tự động điền thêm dấu / cho input nhập ngày 
-     * author: NVThong (12/10/2020)
-     * */
-    autoCompleteDate() {
-        var value = $(this).val();
-        
-        if (value.length == 2 || value.length == 5) value = value + `/`;
-        $(this).val(value);
-
-    }
+  
 
     
 }

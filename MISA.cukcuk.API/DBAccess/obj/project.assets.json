@@ -6075,11 +6075,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj",
       "projectName": "MISA.cukcuk.DBAccess",
-      "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj",
+      "projectPath": "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj",
       "packagesPath": "C:\\Users\\Thong\\.nuget\\packages\\",
-      "outputPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\DBAccess\\obj\\",
+      "outputPath": "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\DBAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Thong\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6095,8 +6095,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
-              "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
+            "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
+              "projectPath": "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
             }
           }
         }

@@ -73,3 +73,11 @@ String.prototype.formatPhoneNumber = function () {
 Number.prototype.formatPhoneNumber = function () {
     return this.replace(/(\d{3})(\d{3})(\d{3})/, '$1-$2-$3');// \d ~ các chữ số 0-9, {3} -> xuất hiện 3 lần
 }
+
+
+var format = {
+    currency: function (value) {
+        value = value.toString().replace(/^0+/, '');
+        return value.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+    }
+}

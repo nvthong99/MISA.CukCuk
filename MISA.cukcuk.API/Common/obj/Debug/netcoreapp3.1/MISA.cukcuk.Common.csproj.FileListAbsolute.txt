@@ -7,3 +7,12 @@ W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.
 W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
 W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
 W:\DemoGIt\MISA.demo\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csprojAssemblyReference.cache
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.deps.json
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csprojAssemblyReference.cache
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.AssemblyInfoInputs.cache
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.AssemblyInfo.cs
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csproj.CoreCompileInputs.cache
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb

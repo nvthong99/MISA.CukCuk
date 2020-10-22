@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kMvbPXp0lcLCUZWoNypz3ZwZEdmK7fc8j+o7zuq6f4V3NampLZfs0wLRqsTWHFK+rViZxbphQQHO1NSrvvtCUw==",
+  "dgSpecHash": "gDM+ePXVC/nypAzovigIWqqjnz2B2vgqOVSwCD7ougUOYZlbBAuwJlyvwZibR94UR3hnsM46MxgfU6UHVPQ+aQ==",
   "success": true,
-  "projectFilePath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj",
+  "projectFilePath": "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thong\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Thong\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",

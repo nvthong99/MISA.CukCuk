@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- css chung -->
     <link rel="stylesheet" href="/css/common/main.css">
     <!-- css cho header -->
@@ -19,10 +22,8 @@
     <link href="/css/layout/sidebar.css" rel="stylesheet" />
     <!-- css cho danh mục khách hàng -->
     <link rel="stylesheet" href="/css/pages/category/employee.css">
+    <link href="/css/responsive/category/employee-reponsive.css" rel="stylesheet" />
 
-    <!-- fontawesome cdn -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -264,43 +265,44 @@
                     <div class="col-8">
                         <div class="row">
                             <div class="row">
-                                <label for="">Mã nhân viên <strong>(*)</strong></label>
-                                <input name="EmployeeCode" id="empoyee-code" type="text" required>
+                                <label title="Mã nhân viên" for="employee-code">Mã nhân viên <strong>(*)</strong></label> 
+                                <input name="EmployeeCode" id="employee-code" type="text" required>
                             </div>
                             <div class="row">
-                                <label class="" for=""> Tên nhân viên <strong>(*)</strong></label>
+                                <label title="Tên nhân viên" class="" for="employee-name"> Tên nhân viên <strong>(*)</strong></label>
                                 <input class="" name="EmployeeName" id="employee-name" type="text" required>
                             </div>
                             <div class="row">
                                 <div class="col-5">
-                                    <label class="" for=""> Ngày sinh</label>
-                                    <input class="" name="DateOfBirth" id="date-of-birth" type="date" value="2020-09-01">
+                                    <label title="Ngày sinh" class="" for="date-of-birth"> Ngày sinh</label>
+                                    <input class="" name="DateOfBirth" id="date-of-birth" type="date">
                                 </div>
                                 <div class="col-5">
-                                    <label class="" for=""> Giới tính</label>
-                                    <select name="Gender">
+                                    <label title="Giới tính" class="" for="date-of-birth"> Giới tính</label>
+                                    <select id="gender-name" name="Gender">
                                         <option value="1" selected>Nam</option>
                                         <option value="0">Nữ</option>
+                                        <option value="2" selected>Khác</option>
                                     </select>
                                 </div>
 
                             </div>
                             <div class="row">
-                                <label for="">Email<strong>(*)</strong></label>
+                                <label title="Email" for="email">Email <strong>(*)</strong></label>
                                 <input name="Email" id="email" type="email" required>
                             </div>
                             <div class="row">
-                                <label title="Điện Thoại Di Động" for="">ĐTDĐ <strong>(*)</strong></label>
+                                <label title="Điện Thoại Di Động" for="phone-number">ĐTDĐ <strong>(*)</strong></label>
                                 <input name="PhoneNumber" id="phone-number" type="text" required>
                             </div>
                             <div class="row">
                                 <div class="col-5">
-                                    <label title="Số chứng minh nhân dân hoặc hộ chiếu"  class="" for=""> Số CMT/HC</label>
-                                    <input class="" name="IdentityNumber" type="text">
+                                    <label title="Số chứng minh nhân dân/hộ chiếu"  class="" for="identity-number"> Số CMT/HC</label>
+                                    <input class="" id="identity-number" name="IdentityNumber" type="text">
                                 </div>
                                 <div class="col-5">
-                                    <label class="" for=""> Ngày Cấp</label>
-                                    <input class="" name="IdentityDate" type="date" >
+                                    <label title="Ngày cấp chứng minh nhân dân" class="" for="indentity-date"> Ngày Cấp</label>
+                                    <input class="" id="indentity-date" name="IdentityDate" type="date" >
                                 </div>
                             </div>
                         </div>
@@ -322,45 +324,46 @@
                     </div>
                 </div>
                 <div class="row">
-                    <label title="nơi cấp chứng minh nhân dân" for="">Nơi cấp CMND</label>
-                    <input name="IdentityPlace" type="text" >
+                    <label title="nơi cấp chứng minh nhân dân" for="indentity-place">Nơi cấp CMND</label>
+                    <input id="indentity-place" name="IdentityPlace" type="text" >
                 </div>
                 <div class="row"><p class="base-mode-heading">Thông tin công việc</p></div>
                 <div class="row">
-                    <label class="" for="">Vị trí</label>
+                    <label class="" for="possition-select">Vị trí</label>
                     <select name="PossitionId" id="possition-select">
-                        <option value="1" selected>Trưởng phòng</option>
-                        <option value="0">Nhân viên</option>
+                        
                     </select>
                 </div>
                 <div class="row">
-                    <label class="" for="">Phòng Ban</label>
+                    <label class="" for="department-select">Phòng Ban</label>
                     <select name="DepartmentId" id="department-select">
-                        <option value="1" selected>Phòng đào tạo</option>
-                        <option value="0">Phòng truyền thông</option>
+                        
                     </select>
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <label class="" for="">mã số thuế cá nhân</label>
-                        <input class="" name="TaxCode" type="text">
+                        <label class="" for="tax-code">Mã số thuế cá nhân</label>
+                        <input id="tax-code" class="" name="TaxCode" type="text">
                     </div>
-                    <div class="col-6">
-                        <label class="" for="">Mức lương</label>
-                        <input class="" name="Salary" type="text">
+                    <div class="col-6 input-salary">
+                        <label class="" for="salary">Mức lương</label>
+                        <input id="salary" format ="currency" class="input-salary" name="Salary" type="text">
 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <label class="" for="">Ngày gia nhập</label>
-                        <input class="" name="JoinDate" type="date">
+                        <label class="" for="join-date">Ngày gia nhập</label>
+                        <input id="join-date" class="" name="JoinDate" type="date">
                     </div>
                     <div class="col-6">
-                        <label class="" for="">Tình trạng</label>
-                        <select name="WorkStatus">
+                        <label class="" for="work-status">Tình trạng</label>
+                        <select id="work-status" name="WorkStatus">
                             <option value="0">Đang làm việc</option>
                             <option value="1">Nghỉ Việc</option>
+                            <option value="2">Thử Việc</option>
+                            <option value="3">Thực tập</option>
+
                         </select>
                     </div>
                 </div>
@@ -395,7 +398,7 @@
         </div>
     </div>
     <!--Message-->
-    <div class="base-modal " id="message-err">
+    <div style="display:block" class="base-modal " id="message-err">
         <div class="base-modal-overlay"></div>
         <div class="base-modal-body message-error">
             <div class="body-top">
@@ -403,8 +406,12 @@
                 <div class="body-btn-exit"></div>
             </div>
             <div class="body-form">
-                <div class="row">
-                    <label id="err-label" for="">Nội dung thông báo lỗi </label>
+
+                <div class="content-waring">
+                    <div class="icon-waring">
+
+                    </div>
+                    <p id="err-label" for="">Nội dung thông báo lỗi nó có thể rất là dài nên em đang test thử xem là nó có bị tràn không</p>
                 </div>
 
                 <div class="row list-button">
@@ -412,6 +419,7 @@
                     <button id="err-ok" class="button-common">Đồng ý</button>
 
                 </div>
+                <button id="keep-tab" style="width: 0; height: 0; border: none; background: none  ;"></button>
             </div>
         </div>
     </div>

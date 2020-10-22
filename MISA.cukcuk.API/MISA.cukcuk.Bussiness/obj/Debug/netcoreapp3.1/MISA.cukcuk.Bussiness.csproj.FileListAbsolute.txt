@@ -12,3 +12,17 @@ W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3
 W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csproj.CopyComplete
 W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.dll
 W:\DemoGIt\MISA.demo\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.pdb
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.deps.json
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.dll
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.pdb
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csprojAssemblyReference.cache
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.AssemblyInfoInputs.cache
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.AssemblyInfo.cs
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csproj.CoreCompileInputs.cache
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csproj.CopyComplete
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.dll
+C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.pdb

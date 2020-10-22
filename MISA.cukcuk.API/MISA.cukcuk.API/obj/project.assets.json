@@ -6214,11 +6214,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj",
+      "projectUniqueName": "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj",
       "projectName": "MISA.cukcuk.API",
-      "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj",
+      "projectPath": "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj",
       "packagesPath": "C:\\Users\\Thong\\.nuget\\packages\\",
-      "outputPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.API\\obj\\",
+      "outputPath": "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Thong\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6234,11 +6234,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
-              "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
+            "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
+              "projectPath": "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
             },
-            "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj": {
-              "projectPath": "W:\\DemoGIt\\MISA.demo\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj"
+            "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj": {
+              "projectPath": "C:\\Users\\Thong\\Documents\\MISA\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj"
             }
           }
         }

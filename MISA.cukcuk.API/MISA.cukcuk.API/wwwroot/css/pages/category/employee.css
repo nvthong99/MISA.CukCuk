@@ -208,31 +208,24 @@
 .content-table table tr th.work-status {
     width: 180px;
 }
-/* responsive */
 
-@media screen and (max-width: 1024px) {
-    .sidebar, .main {
-        position: relative;
-    }
+.input-salary{
+   position: relative;
+}
+.input-salary::before {
+    position: absolute;
+    content: "(VNĐ)";
+    display: block;
+    width: 20px;
+    height: 20px;
+    /* background-color: red; */
+    font-style: oblique;
+    top: 5px;
+    right: 20px;
+    z-index: 1;
+}
 
-        .sidebar .logo {
-            border-bottom: none;
-        }
-
-    .menu {
-        /* position: absolute;
-        top:50px;
-        left: -200px; */
-        transform: translate(-200px, 0px);
-        transition: 1s;
-    }
-
-    .content {
-        /* position: relative;
-        top: 0px;
-        left: -200px; */
-        transform: translateX(-200px);
-        width: calc(100vw - 20px) !important;
-        transition: 1s;
-    }
+.input-salary input{
+   padding-right: 50px;
+    width: calc(100% - 195px);
 }

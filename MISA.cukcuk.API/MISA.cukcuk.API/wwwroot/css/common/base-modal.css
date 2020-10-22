@@ -298,12 +298,12 @@ input[type=radio] {
 }
 /*css cho hộp thoại thông báo lỗi */
 .message-error {
-    height: 150px;
-    width: 350px;
+   
+    width: 430px;
 }
 
 .message-error .list-button {
-    margin-top: 35px;
+        margin: 20px 10px 0px 0px;
     justify-content: flex-end;
 }
 
@@ -313,6 +313,28 @@ input[type=radio] {
     min-width: 50px;
     margin-left: 20px;
 }
-#err-label{
-    width:auto;
+#err-label {
+    width: calc(100% - 70px);
+    margin: 0;
+    padding-left: 10px;
+}
+.icon-waring {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-image: url(/content/img/warning-icon.png);
+    background-size: cover;
+}
+.content-waring{
+    display:flex;
+}
+/*css convention cho the input*/
+input[type = "date"] {
+    padding-left: 30px;
+    width: calc(100% - 180px);
+}
+
+input[format = "number"], input[format = "currency"] {
+    text-align: right;
 }
