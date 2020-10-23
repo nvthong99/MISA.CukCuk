@@ -70,6 +70,28 @@ class baseJS {
 
         });
         $('input[format = "currency"]').on('input change', this.autoFormatInputMoney);
+
+        $('#page-first').click(this.btnPageFirstOnClick.bind(this));
+        $('#page-prev').click(this.btnPagePrevOnclick.bind(this));
+
+        $('#page-next').click(this.btnPageNextOnclick.bind(this));
+
+        $('#page-last').click(this.btnPageLastOnClick.bind(this));
+
+        $('#page-refresh').click(this.btnPageRefreshOnClick.bind(this));
+        $('#page-now').keydown(function (e) {
+            if (e.which == 13) {
+                $('#page-refresh').click();
+            }
+        })
+        $('#row-count').keydown(function (e) {
+            if (e.which == 13) {
+                $('#page-refresh').click();
+            }
+        })
+
+
+
         // format cho unput type date
         //#region TODO: sử dụng datepicker cho ô nhập ngày tháng năm
         //TODO: sử dụng datepicker cho ô nhập ngày tháng năm
@@ -112,7 +134,7 @@ class baseJS {
     //#endregion
 
     //#region Load dữ liệu lên trang web
-    
+
     /**
      *  load dữ liệu lên trang web
      * author: nvthong ( 27/09/2020)
@@ -125,9 +147,9 @@ class baseJS {
         $(".content-table table tbody").empty();
         // lấy data từ sevice
         var urlData = this.getUrlData();
-        if (maxRecord != 0 && recordBegin >=0) {
+        if (maxRecord != 0 && recordBegin >= 0) {
             urlData = `${urlData}/${maxRecord}/${recordBegin}`;
-        } 
+        }
         self = this;
         $.ajax({
             url: urlData,
@@ -182,13 +204,14 @@ class baseJS {
     pagingData(pageNumber) {
         //tính recordBegin
         debugger
-        var row_count = parseInt($('#row-count').val(),10);
+        var row_count = parseInt($('#row-count').val(), 10);
         var recordBegin = (pageNumber - 1) * row_count;
         // lấy dữ liệu trang tương ứng
         this.loadData(row_count, recordBegin);
         // load lại thanh panigation
         $("#cell-begin").text(recordBegin);
-        $("#cell-end").text(recordBegin+row_count);
+        $("#cell-end").text(recordBegin + row_count);
+        $("#page-now").val(pageNumber);
     }
     /**
      * load dữ liệu cho thanh phân trang
@@ -197,13 +220,14 @@ class baseJS {
     loadPagination() {
         //load tổng số trang và bản ghi
         var row_count = $('#row-count').val();
-        var urlData = this.getUrlData() +'/num-paging';
+        var urlData = this.getUrlData() + '/num-paging';
         $.ajax({
             url: urlData,
             method: 'GET'
         }).done(function (res) {
             $('#record-numb').text(res);
-            
+            debugger
+            $('#num-page').text(Math.ceil(res / row_count));
         })
     }
 
@@ -289,6 +313,58 @@ class baseJS {
         this.btnEditOnclick();
         this.state = 'add';
     }
+    //#region các nút phân trang
+    /**
+     * sự kiện click của nút first pages (điều hướng đến trang đầu tiên)
+     * author: NVThong (23/10/2020)
+     * */
+    btnPageFirstOnClick() {
+        this.pagingData(0);
+    }
+    /**
+     * sự kiện click của nút first pages (điều hướng đến trang đầu tiên)
+     * author: NVThong (23/10/2020)
+     * */
+    btnPagePrevOnclick() {
+        var pagePrev = parseInt($("#page-now").val(), 10);
+        this.pagingData(pagePrev - 1);
+    }
+
+    /**
+     * sự kiện click của nút prev pages (điều hướng đến trang đầu tiên)
+     * author: NVThong (23/10/2020)
+     * */
+    btnPageNextOnclick() {
+        var pagePrev = parseInt($("#page-now").val(), 10);
+        this.pagingData(pagePrev + 1);
+    }
+
+    /**
+     * sự kiện click của nút last pages (điều hướng đến trang đầu tiên)
+     * author: NVThong (23/10/2020)
+     * */
+    btnPageLastOnClick() {
+        var lastPage = parseInt($('#num-page').text(), 10);
+        this.pagingData(lastPage );
+    }
+
+    /**
+     * sự kiện click của nút refresh pages (điều hướng đến trang đầu tiên)
+     * author: NVThong (23/10/2020)
+     * */
+    btnPageRefreshOnClick() {
+        var page = parseInt($('#page-now').val(), 10);
+        $('#page-now').val(1);
+        this.pagingData(page);
+    }
+
+    //#endregion
+
+
+
+
+
+
     // #endregion
 
     //#region Thêm thông tin khách hàng
@@ -493,7 +569,7 @@ class baseJS {
         else if (recordEdit.length > 1) {
             this.showMessageError('Bạn chỉ được chọn 1 bản ghi!');
             return;
-        } 
+        }
         var idData = recordEdit.data('id');
         $.ajax(
             {
