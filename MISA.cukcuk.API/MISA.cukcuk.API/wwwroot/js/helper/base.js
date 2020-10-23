@@ -69,6 +69,8 @@ class baseJS {
             else if (e.which == 27) $(".body-btn-exit").click();
 
         });
+        $('#err-ok').click(this.hideMessageError);
+
         $('input[format = "currency"]').on('input change', this.autoFormatInputMoney);
 
         $('#page-first').click(this.btnPageFirstOnClick.bind(this));
@@ -209,8 +211,13 @@ class baseJS {
         // lấy dữ liệu trang tương ứng
         this.loadData(row_count, recordBegin);
         // load lại thanh panigation
+        var maxCell = $('#record-numb').text();
+        
         $("#cell-begin").text(recordBegin);
-        $("#cell-end").text(recordBegin + row_count);
+        var cellEnd = recordBegin + row_count;
+        
+        if (cellEnd > maxCell) cellEnd = maxCell;
+        $("#cell-end").text(cellEnd);
         $("#page-now").val(pageNumber);
     }
     /**
@@ -226,7 +233,7 @@ class baseJS {
             method: 'GET'
         }).done(function (res) {
             $('#record-numb').text(res);
-            debugger
+            
             $('#num-page').text(Math.ceil(res / row_count));
         })
     }
@@ -692,7 +699,11 @@ class baseJS {
     showMessageError(message) {
 
 
-        $('#err-cancel').hide();
+        $('#confirm-cancel').hide();
+        $('#confirm-ok').hide();
+        $('#err-ok').show();
+
+
         $('#err-label').text(message);
         $('#message-err').show();
 
@@ -706,12 +717,15 @@ class baseJS {
     showMessageConfirm(message, yesCallBack, noCallBack) {
         $('#err-label').text(message);
         $('#message-err').show();
+        $('#confirm-cancel').show();
+        $('#confirm-ok').show();
+        $('#err-ok').hide();
 
-        $('#err-cancel').click(function () {
+        $('#confirm-cancel').click(function () {
             $('#message-err').hide();
             noCallBack();
         })
-        $('#err-ok').click(function () {
+        $('#confirm-ok').click(function () {
             $('#message-err').hide();
             yesCallBack();
         })
