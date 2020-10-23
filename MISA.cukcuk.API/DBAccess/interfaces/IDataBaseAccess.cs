@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 namespace MISA.cukcuk.DBAccess.interfaces
 {
     public interface IDataBaseAccess<T>
-    {   
+    {
         /// <summary>
         /// Lấy ra danh sách đối tượng T từ database 
         /// </summary>
         /// CreatedBy: NVThong (26/10/2020)
-        /// <returns></returns>
+        /// <returns>trả về  danh sách entity</returns>
         IEnumerable<T> GetList();
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace MISA.cukcuk.DBAccess.interfaces
         /// </summary>
         /// CreatedBy: NVThong (16/20/2020)
         /// <param name="id">id của phần tử cần lấy dữ liệu</param>
-        /// <returns></returns>
+        /// <returns>trả về 1 đối tượng entity</returns>
         T GetById(Guid id);
 
         /// <summary>
@@ -42,11 +42,27 @@ namespace MISA.cukcuk.DBAccess.interfaces
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
+        /// 
         bool Update(T entity);
+
         /// <summary>
         /// mã lớn nhất của đối tượng
         /// </summary>
         /// <returns></returns>
         string GetMaxCode();
+
+        /// <summary>
+        /// lấy danh sách entity dể phân trang
+        /// </summary>
+        /// <param name="maxRecord">số bản ghi tối đa trên 1 trang</param>
+        /// <param name="recordBegin">bản ghi bắt đầu lấy </param>
+        /// <returns></returns>
+        IEnumerable<T> GetEntityPaging(int maxRecord, int recordBegin);
+
+        /// <summary>
+        /// lấy số bản ghi trong database
+        /// </summary>
+        /// <returns>số bản ghi</returns>
+        int GetNumEntity();
     }
 }

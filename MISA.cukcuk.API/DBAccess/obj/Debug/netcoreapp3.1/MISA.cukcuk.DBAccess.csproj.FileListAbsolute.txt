@@ -22,3 +22,15 @@ C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\net
 C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csproj.CopyComplete
 C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
 C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.deps.json
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csprojAssemblyReference.cache
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.AssemblyInfoInputs.cache
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.AssemblyInfo.cs
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csproj.CoreCompileInputs.cache
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csproj.CopyComplete
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb

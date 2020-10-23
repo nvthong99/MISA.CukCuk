@@ -183,7 +183,7 @@
                     </div>
 
                     <div class="content-table">
-                        <table fieldID="EmployeeId" id="tbListData">
+                        <table detectName="employee-name" fieldID="EmployeeId" id="tbListData">
                             <thead>
                                 <tr>
                                     <th class="employee-code" format="" fieldName="EmployeeCode" title="Mã Nhân viên">Mã Nhân viên</th>
@@ -223,7 +223,7 @@
                             <div class="page-input border-right">
                                 <p>Trang</p>
                                 <input type="text" name="pageNumber" value="1" />
-                                <p>Trên 1</p>
+                                <div class="num-page"><p>Trên</p> <p id="num-page">1</p></div>
 
                             </div>
                             <div class="pagination-item-icon page-next"></div>
@@ -232,14 +232,14 @@
                             <div class="number-cell">
                                 <p>Số bản ghi</p>
                                 <div class="num-cell-box">
-                                    <input type="text" name="cellNumber" value="25" />
+                                    <input id="row-count" type="text" name="cellNumber" value="25" />
                                     <div class="hd-pop"></div>
                                 </div>
                             </div>
                         </div>
-                        <p class="status">
-                            hiển thị 1 - 5 trên 25 kết quả
-                        </p>
+                        <div class="status">
+                            hiển thị <p id="cell-begin">1</p> - <p id="cell-end">5</p> trên <p id="record-numb">25</p> kết quả
+                        </div>
                     </div>
                 </div>
 
@@ -265,7 +265,7 @@
                     <div class="col-8">
                         <div class="row">
                             <div class="row">
-                                <label title="Mã nhân viên" for="employee-code">Mã nhân viên <strong>(*)</strong></label> 
+                                <label title="Mã nhân viên" for="employee-code">Mã nhân viên <strong>(*)</strong></label>
                                 <input name="EmployeeCode" id="employee-code" type="text" required>
                             </div>
                             <div class="row">
@@ -297,12 +297,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-5">
-                                    <label title="Số chứng minh nhân dân/hộ chiếu"  class="" for="identity-number"> Số CMT/HC</label>
+                                    <label title="Số chứng minh nhân dân/hộ chiếu" class="" for="identity-number"> Số CMT/HC</label>
                                     <input class="" id="identity-number" name="IdentityNumber" type="text">
                                 </div>
                                 <div class="col-5">
                                     <label title="Ngày cấp chứng minh nhân dân" class="" for="indentity-date"> Ngày Cấp</label>
-                                    <input class="" id="indentity-date" name="IdentityDate" type="date" >
+                                    <input class="" id="indentity-date" name="IdentityDate" type="date">
                                 </div>
                             </div>
                         </div>
@@ -325,19 +325,17 @@
                 </div>
                 <div class="row">
                     <label title="nơi cấp chứng minh nhân dân" for="indentity-place">Nơi cấp CMND</label>
-                    <input id="indentity-place" name="IdentityPlace" type="text" >
+                    <input id="indentity-place" name="IdentityPlace" type="text">
                 </div>
                 <div class="row"><p class="base-mode-heading">Thông tin công việc</p></div>
                 <div class="row">
                     <label class="" for="possition-select">Vị trí</label>
                     <select name="PossitionId" id="possition-select">
-                        
                     </select>
                 </div>
                 <div class="row">
                     <label class="" for="department-select">Phòng Ban</label>
                     <select name="DepartmentId" id="department-select">
-                        
                     </select>
                 </div>
                 <div class="row">
@@ -347,7 +345,7 @@
                     </div>
                     <div class="col-6 input-salary">
                         <label class="" for="salary">Mức lương</label>
-                        <input id="salary" format ="currency" class="input-salary" name="Salary" type="text">
+                        <input id="salary" format="currency" class="input-salary" name="Salary" type="text">
 
                     </div>
                 </div>
@@ -378,7 +376,7 @@
                             <div class="button-icon add-icon"></div>
                             <p>Cất & thêm</p>
                         </button>
-                        <button  title="hủy bỏ tác vụ" id="cancel" class="button-common button-group-item button-cancel ">
+                        <button title="hủy bỏ tác vụ" id="cancel" class="button-common button-group-item button-cancel ">
                             <div class="button-icon cancel-icon"></div>
                             <p>Hủy bỏ</p>
                         </button>
@@ -398,7 +396,7 @@
         </div>
     </div>
     <!--Message-->
-    <div style="display:block" class="base-modal " id="message-err">
+    <div class="base-modal " id="message-err">
         <div class="base-modal-overlay"></div>
         <div class="base-modal-body message-error">
             <div class="body-top">

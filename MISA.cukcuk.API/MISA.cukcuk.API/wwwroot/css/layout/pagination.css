@@ -13,10 +13,20 @@
     margin: 0;
     padding: 0 10px;
     font-size: 15px;
+    display:flex;
 }
-
+.content-statusbar .status p{
+    margin: 0 3px;
+}
+.num-page{
+    display:flex;
+}
+.
+#num-page p {
+    margin: 0 3px;
+}
 /* css cho phần phân trang */
-.pagination{
+.pagination {
     display: flex;
 }
 .pagination{

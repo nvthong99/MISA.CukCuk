@@ -43,7 +43,32 @@ class EmployeeJS extends baseJS {
        
         return $('#dialog-employee input,select,textarea');
     }
+    btnAddOnclick() {
+        
+        // hiển thị dialog chi tiết
+        super.btnAddOnclick();
+        // lấy mã số nhân viên lớn nhất từ sevice
 
+        $.ajax({
+            url: '/api/Employee/employee-max-code',
+            method: "GET",
+            contentType: "application/json",
+
+        }).done(function (res) {
+            var num = res.replaceAll(/\D/g, ''); // bỏ hết ký tự khôn phải số
+
+            var maxCode = parseInt(num, 10); // chuyển về number
+            maxCode += 1;
+            var value = maxCode.toString();
+            if (value.length < num.length) {
+                while (value.length == maxCode.length) {
+                    value = '0' + value
+                }
+            }
+            $('#employee-code').val('NV' + value);
+        })
+        //gán vào input
+    }
     /**
      * biding dữ liệu cho các select
      * @param {any} selector id của ô select

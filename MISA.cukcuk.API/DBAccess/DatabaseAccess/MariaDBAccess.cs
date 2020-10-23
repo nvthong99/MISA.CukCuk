@@ -43,7 +43,7 @@ namespace MISA.cukcuk.API.DatabaseAccess
         {
             var ClassName = typeof(T).Name;
             // khai báo câu truy vấn
-            _mySqlCommand.CommandText = $"proc_Get{ClassName}ById";
+            _mySqlCommand.CommandText = $"Proc_Get{ClassName}ById";
 
             _mySqlCommand.Parameters.AddWithValue($"@{ClassName}Id", id);
             MySqlDataReader mySqlDataReader = _mySqlCommand.ExecuteReader();
@@ -73,7 +73,7 @@ namespace MISA.cukcuk.API.DatabaseAccess
         {
             List<T> entitys = new List<T>();
             var className = typeof(T).Name;
-            _mySqlCommand.CommandText = $"proc_Get{className}s";
+            _mySqlCommand.CommandText = $"Proc_Get{className}s";
             
             MySqlDataReader mySqlDataReader = _mySqlCommand.ExecuteReader();
             while (mySqlDataReader.Read())
@@ -101,7 +101,7 @@ namespace MISA.cukcuk.API.DatabaseAccess
         {
             var ClassName = typeof(T).Name;
             // khai báo câu truy vấn
-            _mySqlCommand.CommandText = $"proc_Insert{ClassName}";
+            _mySqlCommand.CommandText = $"Proc_Insert{ClassName}";
 
             var propeties = typeof(T).GetProperties();
 
@@ -125,7 +125,7 @@ namespace MISA.cukcuk.API.DatabaseAccess
 
             var ClassName = typeof(T).Name;
             // khai báo câu truy vấn
-            _mySqlCommand.CommandText = $"proc_Update{ClassName}";
+            _mySqlCommand.CommandText = $"Proc_Update{ClassName}";
 
             var propeties = typeof(T).GetProperties();
 
@@ -148,12 +148,57 @@ namespace MISA.cukcuk.API.DatabaseAccess
         public string GetMaxCode()
         {
             var className = typeof(T).Name;
-            _mySqlCommand.CommandText = $"proc_Get{className}s";
+            _mySqlCommand.CommandText = $"Proc_Get{className}CodeMax";
             string value=null;
             MySqlDataReader mySqlDataReader = _mySqlCommand.ExecuteReader();
             while (mySqlDataReader.Read())
             {
                     value = (string)mySqlDataReader.GetValue(0);
+            }
+            _mySqlConnection.Close();
+            return value;
+        }
+
+        public IEnumerable<T> GetEntityPaging(int maxRecord, int recordBegin)
+        {
+
+            List<T> entitys = new List<T>();
+            var className = typeof(T).Name;
+            _mySqlCommand.CommandText = $"Proc_Get{className}Paging";
+            _mySqlCommand.Parameters.AddWithValue($"@maxRecord", maxRecord);
+            _mySqlCommand.Parameters.AddWithValue($"@recordBegin", recordBegin);
+
+            MySqlDataReader mySqlDataReader = _mySqlCommand.ExecuteReader();
+            while (mySqlDataReader.Read())
+            {
+
+                var entity = Activator.CreateInstance<T>();
+                for (int i = 0; i < mySqlDataReader.FieldCount; i++)
+                {
+                    var columnName = mySqlDataReader.GetName(i);
+                    var value = mySqlDataReader.GetValue(i);
+                    var propertyInfo = entity.GetType().GetProperty(columnName);
+                    if (propertyInfo != null && value != DBNull.Value)
+                    {
+                        propertyInfo.SetValue(entity, value);
+                    }
+                }
+                entitys.Add(entity);
+
+            }
+            _mySqlConnection.Close();
+            return entitys;
+        }
+
+        public int GetNumEntity()
+        {
+            var className = typeof(T).Name;
+            _mySqlCommand.CommandText = $"Proc_GetNum{className}sPaging";
+            int value = 0 ;
+            MySqlDataReader mySqlDataReader = _mySqlCommand.ExecuteReader();
+            while (mySqlDataReader.Read())
+            {
+                value = Convert.ToInt32(mySqlDataReader.GetValue(0));
             }
             _mySqlConnection.Close();
             return value;

@@ -16,3 +16,12 @@ C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netco
 C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csproj.CoreCompileInputs.cache
 C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
 C:\Users\Thong\Documents\MISA\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.deps.json
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csprojAssemblyReference.cache
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.AssemblyInfoInputs.cache
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.AssemblyInfo.cs
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csproj.CoreCompileInputs.cache
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb

@@ -8,7 +8,7 @@ namespace MISA.cukcuk.DBAccess.responsitory
 {
     public class BaseResponsitory<T>:IBaseResponsitory<T>
     {
-        IDataBaseAccess<T> _dataBaseAccess;
+        public IDataBaseAccess<T> _dataBaseAccess;
         public BaseResponsitory(IDataBaseAccess<T> dataBaseAccess)
         {
             _dataBaseAccess = dataBaseAccess;
