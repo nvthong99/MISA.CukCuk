@@ -14,6 +14,11 @@ namespace MISA.cukcuk.DBAccess.responsitory
            
         }
 
+        public Employee CkeckEmployee(string storeName, string fieldName, object value)
+        {
+            return _dataBaseAccess.CheckEntity(storeName, fieldName, value);
+        }
+
         public string GetEmloyeeMaxCode()
         {
             return _dataBaseAccess.GetMaxCode();

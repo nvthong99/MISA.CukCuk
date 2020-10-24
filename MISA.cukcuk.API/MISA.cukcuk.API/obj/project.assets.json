@@ -6209,19 +6209,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nvthong\\.nuget\\packages\\": {}
+    "C:\\Users\\Thong\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nvthong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj",
+      "projectUniqueName": "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj",
       "projectName": "MISA.cukcuk.API",
-      "projectPath": "C:\\Users\\nvthong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj",
-      "packagesPath": "C:\\Users\\nvthong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nvthong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.API\\obj\\",
+      "projectPath": "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.API\\MISA.cukcuk.API.csproj",
+      "packagesPath": "C:\\Users\\Thong\\.nuget\\packages\\",
+      "outputPath": "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nvthong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Thong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6234,11 +6234,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\nvthong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
-              "projectPath": "C:\\Users\\nvthong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
+            "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
+              "projectPath": "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
             },
-            "C:\\Users\\nvthong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj": {
-              "projectPath": "C:\\Users\\nvthong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj"
+            "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj": {
+              "projectPath": "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\MISA.cukcuk.Bussiness\\MISA.cukcuk.Bussiness.csproj"
             }
           }
         }
@@ -6283,7 +6283,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

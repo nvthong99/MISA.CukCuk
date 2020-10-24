@@ -45,6 +45,7 @@
         padding-top: 10px;
         
         height: calc(100% - 40px);
+        min-height: 80px;
         background-color: #ffffff;
     }
 
@@ -337,4 +338,19 @@ input[type = "date"] {
 
 input[format = "number"], input[format = "currency"] {
     text-align: right;
+}
+
+.icon-success {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-image: url(/content/img/success-icon.png);
+    background-size: cover;
+}
+
+#success-label {
+    width: calc(100% - 70px);
+    margin: 0;
+    padding-left: 10px;
 }

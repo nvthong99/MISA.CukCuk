@@ -95,19 +95,7 @@ class baseJS {
 
 
         // format cho unput type date
-        //#region TODO: sử dụng datepicker cho ô nhập ngày tháng năm
-        //TODO: sử dụng datepicker cho ô nhập ngày tháng năm
-        /* $("#date-of-birth").datepicker({
-             dateFormat: 'dd/mm/yy',
-             changeMonth: true, //Tùy chọn này cho phép người dùng chọn tháng
-             changeYear: true, //Tùy chọn này cho phép người dùng lựa chọn từ phạm vi năm
-             showAnim: "slideDown",
-             yearRange: "1800:2020",
-             
-         });
-         $("#date-of-birth").datepicker($.datepicker.regional["vi"]);
- 
-         $("#date-of-birth").keyup(this.autoCompleteDate);*/
+        //#region TODO: 
         //TODO: xử lý sự kiện thoát và submit bằng bàn phím của dialog
         // $(".base-modal").keydown(function (e){
         //     switch(e.which){
@@ -205,17 +193,17 @@ class baseJS {
      */
     pagingData(pageNumber) {
         //tính recordBegin
-        debugger
+        
         var row_count = parseInt($('#row-count').val(), 10);
         var recordBegin = (pageNumber - 1) * row_count;
         // lấy dữ liệu trang tương ứng
         this.loadData(row_count, recordBegin);
         // load lại thanh panigation
         var maxCell = $('#record-numb').text();
-        
+
         $("#cell-begin").text(recordBegin);
         var cellEnd = recordBegin + row_count;
-        
+
         if (cellEnd > maxCell) cellEnd = maxCell;
         $("#cell-end").text(cellEnd);
         $("#page-now").val(pageNumber);
@@ -233,7 +221,7 @@ class baseJS {
             method: 'GET'
         }).done(function (res) {
             $('#record-numb').text(res);
-            
+
             $('#num-page').text(Math.ceil(res / row_count));
         })
     }
@@ -352,7 +340,7 @@ class baseJS {
      * */
     btnPageLastOnClick() {
         var lastPage = parseInt($('#num-page').text(), 10);
-        this.pagingData(lastPage );
+        this.pagingData(lastPage);
     }
 
     /**
@@ -458,10 +446,17 @@ class baseJS {
                 }).done(function (res) {
                     self.loadData();
                     self.hideBaseModal();
-                    self.showMessageError(`${notification} thành công!`);
+                    self.showSuccessMessage(`${notification} thành công!`);
 
-                }).fail(function (res) {
-                    self.showMessageError(`${notification} thất bại!`);
+                }).fail(function (err) {
+                    debugger
+                    var message = err.responseText.replace('System.Exception:', '');
+                    var tmp = message.indexOf('\n');
+                    message = message.slice(0, tmp);
+                    debugger
+
+
+                    self.showMessageError(message);
                 });
 
 
@@ -501,7 +496,7 @@ class baseJS {
         var recordDeletes = $('#tbListData tr[class = tr-selected]');
 
 
-        debugger
+        
         var message;
         if (recordDeletes.length == 0) {
 
@@ -530,7 +525,6 @@ class baseJS {
                 // lấy id tương ứng với bản ghi
                 var idDeleteData = $(record).data('id');
                 // gửi id lên sever và xóa dữ liệu
-
                 var url = `${self.getUrlData()}/` + idDeleteData;
                 $.ajax({
                     url: url,
@@ -539,19 +533,13 @@ class baseJS {
                 }).done(function (res) {
 
                     self.loadData();
-                    self.showMessageError('Đã xóa thành công');
+                    self.showSuccessMessage('Đã xóa thành công');
 
                 })
             })
 
         });
-
-
-
-
     }
-
-
 
     /**
      * xử lý sư kiện click cho nút sửa
@@ -566,9 +554,7 @@ class baseJS {
         //lấy bản ghi cần sửa dữ liệu
         var urlData = this.getUrlData();
         var recordEdit = $('#tbListData tr[class = tr-selected]');
-        // lấy dữ liệu tương ứng với bản ghi
-
-
+       //check số lượng bản ghi đã chọn
         if (recordEdit.length == 0) {
             this.showMessageError('Bạn Chưa chọn bản ghi!');
             return;
@@ -577,6 +563,7 @@ class baseJS {
             this.showMessageError('Bạn chỉ được chọn 1 bản ghi!');
             return;
         }
+         // lấy dữ liệu tương ứng với bản ghi
         var idData = recordEdit.data('id');
         $.ajax(
             {
@@ -612,21 +599,10 @@ class baseJS {
                     }
 
                 }
-
-
-
             })
-
-
         })
-
-
-        // lưu lại dữ liệu được sửa.
         // lấy id của bản ghi đang sửa tương ứng trong data
-        //TODO: data đang config(sửa)
         this.idEditData = idData;
-        /* this.indexEditData = data.findIndex(obj => obj[$(".content-table table").attr('fieldId')] == idData);*/
-        // lấy id của bản ghi đã sửa để lưu lại ở hàm sự kiện của nút cất
     }
 
     /**
@@ -703,7 +679,7 @@ class baseJS {
         $('#confirm-ok').hide();
         $('#err-ok').show();
 
-
+        $('#message-err .icon-waring').css('background-image', 'url("/content/img/warning-icon.png")');
         $('#err-label').text(message);
         $('#message-err').show();
 
@@ -716,6 +692,7 @@ class baseJS {
     //TODO:  xác nhận qua hộp thoại confirm
     showMessageConfirm(message, yesCallBack, noCallBack) {
         $('#err-label').text(message);
+        $('#message-err .icon-waring').css('background-image', 'url("/content/img/help.png")');
         $('#message-err').show();
         $('#confirm-cancel').show();
         $('#confirm-ok').show();
@@ -771,6 +748,13 @@ class baseJS {
         validateForm.inputRequired(this);
     }
 
-
+    showSuccessMessage(message) {
+        debugger
+        $('#success-label').text(message);
+        $('#message-success').show();
+        setTimeout(function () {
+            $('#message-success').hide();
+        },1000)
+    }
 
 }

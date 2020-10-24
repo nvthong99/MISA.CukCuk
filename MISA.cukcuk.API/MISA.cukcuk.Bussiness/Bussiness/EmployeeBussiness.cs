@@ -40,13 +40,36 @@ namespace MISA.cukcuk.Bussiness.Bussiness
         }
 
         public bool Insert(Employee entity)
-        {   
-            return _employeeResponsitory.Insert(entity);
+        {
+            var validate = Validate(entity);
+            if (validate)
+                return _employeeResponsitory.Insert(entity);
+            else
+                return default;
         }
 
         public bool Update(Employee entity)
         {
             return _employeeResponsitory.Update(entity);
         }
+
+
+        /// <summary>
+        /// validate trước khi thêm vào database
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns>true: không có lỗi, false: có lỗi </returns>
+        public bool Validate(Employee employee)
+        {
+            var isValidate = true;
+            var checkCode = _employeeResponsitory.CkeckEmployee("Proc_GetEmployeeByCode", "EmployeeCode", employee.EmployeeCode);
+            if (checkCode != null)
+            {
+                isValidate = false;
+                throw new Exception("Bị trùng mã code với nhân viên " + checkCode.EmployeeName);
+            }
+            return isValidate;
+        }
+
     }
 }

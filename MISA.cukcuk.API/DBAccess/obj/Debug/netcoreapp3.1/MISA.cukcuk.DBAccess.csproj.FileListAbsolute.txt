@@ -34,3 +34,15 @@ C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcor
 C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csproj.CopyComplete
 C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
 C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.deps.json
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csprojAssemblyReference.cache
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.AssemblyInfoInputs.cache
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.AssemblyInfo.cs
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csproj.CoreCompileInputs.cache
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.csproj.CopyComplete
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\DBAccess\obj\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb

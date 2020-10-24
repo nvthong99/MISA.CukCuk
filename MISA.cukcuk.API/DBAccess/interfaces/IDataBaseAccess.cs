@@ -64,5 +64,14 @@ namespace MISA.cukcuk.DBAccess.interfaces
         /// </summary>
         /// <returns>số bản ghi</returns>
         int GetNumEntity();
+
+        /// <summary>
+        /// lấy ra đối tượng theo thuộc tính được truyền vào
+        /// </summary>
+        /// <param name="fieldName">tên thuộc tính</param>
+        /// <param name="value">giá trị của trường lưu thuộc tính</param>
+        /// <returns></returns>
+        T CheckEntity(string storeName,string fieldName, object value);
+        
     }
 }

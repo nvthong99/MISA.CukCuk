@@ -16,8 +16,8 @@ namespace MISA.cukcuk.API.DatabaseAccess
         MySqlConnection _mySqlConnection;
         MySqlCommand _mySqlCommand;
 
-   
 
+        #region Constructer khởi tạo connection đến DataBase
         public MariaDBAccess()
         {
             connectionString = "User Id=nvmanh;PassWord=12345678@Abc;Host=35.194.166.58; Database=MISACukCuk_F09_NVThong; Character Set=utf8";
@@ -27,6 +27,9 @@ namespace MISA.cukcuk.API.DatabaseAccess
             _mySqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
             
         }
+        #endregion
+
+        #region Xóa dữ liệu
         public bool DeleteById(Guid id)
         {
             var entityName = typeof(T).Name;
@@ -36,9 +39,15 @@ namespace MISA.cukcuk.API.DatabaseAccess
            
             var result = _mySqlCommand.ExecuteNonQuery();
             _mySqlConnection.Close();
-            return true;
+            if (result > 0)
+            {
+                return true;
+            }
+            else return false;
         }
+        #endregion
 
+        #region Lấy dữ liệu
         public T GetById(Guid id)
         {
             var ClassName = typeof(T).Name;
@@ -69,6 +78,35 @@ namespace MISA.cukcuk.API.DatabaseAccess
 
         }
 
+        public T CheckEntity(string storeName, string fieldName, object value)
+        {
+
+            // khai báo câu truy vấn
+            _mySqlCommand.CommandText = storeName;
+            _mySqlCommand.Parameters.AddWithValue($"@{fieldName}", value);
+            MySqlDataReader mySqlDataReader = _mySqlCommand.ExecuteReader();
+            
+            while (mySqlDataReader.Read())
+            {
+
+                var entity = Activator.CreateInstance<T>();
+                for (int i = 0; i < mySqlDataReader.FieldCount; i++)
+                {
+                    var columnName = mySqlDataReader.GetName(i);
+                    var val = mySqlDataReader.GetValue(i);
+                    var propertyInfo = entity.GetType().GetProperty(columnName);
+                    if (propertyInfo != null && val != DBNull.Value)
+                    {
+                        propertyInfo.SetValue(entity, val);
+                    }
+                }
+                _mySqlConnection.Close();
+                return entity;
+            }
+            _mySqlConnection.Close();
+            return default;
+        }
+
         public IEnumerable<T> GetList()
         {
             List<T> entitys = new List<T>();
@@ -96,64 +134,15 @@ namespace MISA.cukcuk.API.DatabaseAccess
             _mySqlConnection.Close();
             return entitys;
         }
-
-        public bool Insert(T entity)
-        {
-            var ClassName = typeof(T).Name;
-            // khai báo câu truy vấn
-            _mySqlCommand.CommandText = $"Proc_Insert{ClassName}";
-
-            var propeties = typeof(T).GetProperties();
-
-            foreach (var propety in propeties)
-            {
-                var propetyName = propety.Name; // lấy tên thuộc tính
-                var propetyValue = propety.GetValue(entity); // lấy giá trị của propety đó trong đối tượng truyền vào\
-                if (propetyValue == null) propetyValue = DBNull.Value; //  chuyển về dạng null của database 
-                _mySqlCommand.Parameters.AddWithValue($"@{propetyName}", propetyValue);
-            }
-            
-            // thực thi công việc 
-            var result = _mySqlCommand.ExecuteNonQuery();
-            // đóng kết nối 
-            _mySqlConnection.Close();
-            return default;
-        }
-
-        public bool Update(T entity)
-        {
-
-            var ClassName = typeof(T).Name;
-            // khai báo câu truy vấn
-            _mySqlCommand.CommandText = $"Proc_Update{ClassName}";
-
-            var propeties = typeof(T).GetProperties();
-
-            foreach (var propety in propeties)
-            {
-                var propetyName = propety.Name; // lấy tên thuộc tính
-                var propetyValue = propety.GetValue(entity); // lấy giá trị của propety đó trong đối tượng truyền vào
-                if (propetyValue == null) propetyValue = DBNull.Value;
-                _mySqlCommand.Parameters.AddWithValue($"@{propetyName}", propetyValue);
-            }
-
-            // thực thi công việc 
-            var result = _mySqlCommand.ExecuteNonQuery();
-            // đóng kết nối 
-            _mySqlConnection.Close();
-            return true;
-        }
-
-
         public string GetMaxCode()
         {
             var className = typeof(T).Name;
             _mySqlCommand.CommandText = $"Proc_Get{className}CodeMax";
-            string value=null;
+            string value = null;
             MySqlDataReader mySqlDataReader = _mySqlCommand.ExecuteReader();
             while (mySqlDataReader.Read())
             {
-                    value = (string)mySqlDataReader.GetValue(0);
+                value = (string)mySqlDataReader.GetValue(0);
             }
             _mySqlConnection.Close();
             return value;
@@ -192,9 +181,10 @@ namespace MISA.cukcuk.API.DatabaseAccess
 
         public int GetNumEntity()
         {
+            _mySqlCommand.Parameters.Clear();
             var className = typeof(T).Name;
             _mySqlCommand.CommandText = $"Proc_GetNum{className}sPaging";
-            int value = 0 ;
+            int value = 0;
             MySqlDataReader mySqlDataReader = _mySqlCommand.ExecuteReader();
             while (mySqlDataReader.Read())
             {
@@ -203,5 +193,76 @@ namespace MISA.cukcuk.API.DatabaseAccess
             _mySqlConnection.Close();
             return value;
         }
+
+     
+
+
+        #endregion
+
+        #region Thêm dữ liệu
+        public bool Insert(T entity)
+        {
+            _mySqlConnection.Open();
+            _mySqlCommand.Parameters.Clear();
+            var ClassName = typeof(T).Name;
+            // khai báo câu truy vấn
+            _mySqlCommand.CommandText = $"Proc_Insert{ClassName}";
+            
+            var propeties = typeof(T).GetProperties();
+
+            foreach (var propety in propeties)
+            {
+                var propetyName = propety.Name; // lấy tên thuộc tính
+                var propetyValue = propety.GetValue(entity); // lấy giá trị của propety đó trong đối tượng truyền vào\
+                if (propetyValue == null) propetyValue = DBNull.Value; //  chuyển về dạng null của database 
+                _mySqlCommand.Parameters.AddWithValue($"@{propetyName}", propetyValue);
+            }
+            
+            // thực thi công việc 
+            var result = _mySqlCommand.ExecuteNonQuery();
+            // đóng kết nối 
+            _mySqlConnection.Close();
+            if (result > 0)
+            {
+                return true;
+            }
+            else return false;
+            
+        }
+        #endregion
+
+        #region Sửa dữ liệu
+        public bool Update(T entity)
+        {
+            _mySqlCommand.Parameters.Clear();
+            var ClassName = typeof(T).Name;
+            // khai báo câu truy vấn
+            _mySqlCommand.CommandText = $"Proc_Update{ClassName}";
+
+            var propeties = typeof(T).GetProperties();
+
+            foreach (var propety in propeties)
+            {
+                var propetyName = propety.Name; // lấy tên thuộc tính
+                var propetyValue = propety.GetValue(entity); // lấy giá trị của propety đó trong đối tượng truyền vào
+                if (propetyValue == null) propetyValue = DBNull.Value;
+                _mySqlCommand.Parameters.AddWithValue($"@{propetyName}", propetyValue);
+            }
+
+            // thực thi công việc 
+            var result = _mySqlCommand.ExecuteNonQuery();
+            // đóng kết nối 
+            _mySqlConnection.Close();
+            if (result > 0)
+            {
+                return true;
+            }
+            else return false;
+        }
+
+
+        #endregion
+
+
     }
 }

@@ -25,3 +25,12 @@ C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcorea
 C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csproj.CoreCompileInputs.cache
 C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
 C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.deps.json
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\Common\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csprojAssemblyReference.cache
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.AssemblyInfoInputs.cache
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.AssemblyInfo.cs
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.csproj.CoreCompileInputs.cache
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\Common\obj\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb

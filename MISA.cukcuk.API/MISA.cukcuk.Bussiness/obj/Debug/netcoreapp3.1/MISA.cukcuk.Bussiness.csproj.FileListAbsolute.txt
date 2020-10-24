@@ -40,3 +40,17 @@ C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj
 C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csproj.CopyComplete
 C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.dll
 C:\Users\nvthong\Documents\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.pdb
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.deps.json
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.dll
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.pdb
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.dll
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.dll
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.Common.pdb
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\bin\Debug\netcoreapp3.1\MISA.cukcuk.DBAccess.pdb
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csprojAssemblyReference.cache
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.AssemblyInfoInputs.cache
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.AssemblyInfo.cs
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csproj.CoreCompileInputs.cache
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.csproj.CopyComplete
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.dll
+W:\WEB2020_09_NVTHONG\MISA.CukCuk\MISA.cukcuk.API\MISA.cukcuk.Bussiness\obj\Debug\netcoreapp3.1\MISA.cukcuk.Bussiness.pdb
