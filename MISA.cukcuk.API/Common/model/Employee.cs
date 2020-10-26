@@ -27,6 +27,9 @@ namespace MISA.cukcuk.Common.model
         /// Giới tính
         /// </summary>
         public Gender Gender { get; set; }
+        /// <summary>
+        /// Tên giới tính
+        /// </summary>
         public string GenderName
         {
             get
@@ -96,23 +99,30 @@ namespace MISA.cukcuk.Common.model
         /// tính trạng công việc
         /// </summary>
         public WorkStatus WorkStatus { get; set; }
+        /// <summary>
+        /// Tên tình trạng công việc
+        /// </summary>
         public string WorkStatusName 
         {
             get
             {
-                switch (WorkStatus)
-                {
-                    case WorkStatus.Working:
-                        return "Đang làm việc";
-                    case WorkStatus.Stop:
-                        return "Đã nghỉ việc";
-                    case WorkStatus.Probationary:
-                        return "Đang thử việc";
-                    case WorkStatus.Fresher:
-                        return "Thực tập";
-                    default:
-                        return "Không xác định";
-                }
+                
+                
+                    switch (WorkStatus)
+                    {
+                        case WorkStatus.Working:
+                            return "Đang làm việc";
+                        case WorkStatus.Stop:
+                            return "Đã nghỉ việc";
+                        case WorkStatus.Probationary:
+                            return "Đang thử việc";
+                        case WorkStatus.Fresher:
+                            return "Thực tập";
+                        default:
+                            return "Không xác định";
+                    }
+                
+
             }
         }
     }

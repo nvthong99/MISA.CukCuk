@@ -8,6 +8,13 @@ $(document).ready(() => {
  * author: nvthong ( 27/09/2020)
  */
 class baseJS {
+
+
+    //#region Hàm Khởi Tạo
+    /**
+     * hàm khởi tạo
+     * author: NVTHong
+     * */
     constructor() {
         try {
             this.pagingData(1);
@@ -18,6 +25,8 @@ class baseJS {
         }
 
     }
+    //#endregion
+
     //#region Khởi tạo sự kiện
     /**
      * Khởi tạo sự kiện cho trang 
@@ -42,11 +51,11 @@ class baseJS {
         $('#dialog-btn-save').click(this.bttSaveOnClick.bind(this));
 
         // sự kiện click nút cất và thêm trên dialog
-        $('#save-and-add').click(function () { console.log('click  cat va them') })
+        $('#save-and-add').click(this.bttSaveOnClick.bind(this))
         // sự kiện blur để validate cho các input có thuộc tính required
         $('input[required]').blur(this.validate);
         // sự kiện khi click vào hàng để sửa và xóa
-        $('#tbListData').on('click', 'tr', function (e) {
+        $('#tbListData tbody').on('click', 'tr', function (e) {
             if ($(this).hasClass('tr-selected')) {
                 $(this).removeClass('tr-selected');
             }
@@ -61,12 +70,15 @@ class baseJS {
         // xử lý phím tắt cho dialog
         $('.base-modal').keydown(function (e) {
 
-            if (e.ctrlKey && e.which == 83) {
+            if (e.ctrlKey && e.shiftKey && e.which == 83) $('#save-and-add').click();
+            if (e.ctrlKey && ( e.which == 83 || e.which == 115) ) {
+                
+                e.preventDefault();
+                $('#dialog-btn-save').click();
+                }
+            if (!e.ctrlKey && e.which == 27) $(".body-btn-exit").click();
+            if (e.ctrlKey && e.which == 81) $(".body-btn-exit").click();
 
-                if (e.shiftKey) $('#save-and-add').click();
-                else $('#dialog-btn-save').click();
-            }
-            else if (e.which == 27) $(".body-btn-exit").click();
 
         });
         $('#err-ok').click(this.hideMessageError);
@@ -94,25 +106,10 @@ class baseJS {
 
 
 
-        // format cho unput type date
-        //#region TODO: 
-        //TODO: xử lý sự kiện thoát và submit bằng bàn phím của dialog
-        // $(".base-modal").keydown(function (e){
-        //     switch(e.which){
-        //         case 27:
-        //              this.hideBaseModal;
-        //              
-        //             break;
-        //         case 13: 
-        //             this.bttSaveOnClick.bind(this);
-        //     }
-        // })
-
-        //#endregion
     }
     //#endregion
 
-    //#region lấy url api để gửi request
+    //#region Lấy url api để gửi request
     /**
      * hàm lấy url  data
      * author: nvthong ( 28/09/2020)
@@ -193,15 +190,20 @@ class baseJS {
      */
     pagingData(pageNumber) {
         //tính recordBegin
-        
+
         var row_count = parseInt($('#row-count').val(), 10);
+        var max_row = $('#record-numb').text();
+        if (row_count > max_row) {
+            row_count = max_row;
+            $('#row-count').val(max_row)
+        }
         var recordBegin = (pageNumber - 1) * row_count;
         // lấy dữ liệu trang tương ứng
         this.loadData(row_count, recordBegin);
         // load lại thanh panigation
         var maxCell = $('#record-numb').text();
 
-        $("#cell-begin").text(recordBegin);
+        $("#cell-begin").text(recordBegin + 1);
         var cellEnd = recordBegin + row_count;
 
         if (cellEnd > maxCell) cellEnd = maxCell;
@@ -228,7 +230,7 @@ class baseJS {
 
     //#endregion
 
-    //#region format dữ liệu trước khi load
+    //#region Format dữ liệu trước khi load
 
     /**
      * format dữ liệu 
@@ -272,15 +274,10 @@ class baseJS {
 
     //#endregion
 
-    //#region sự kiện của các button
+    //#region Sự kiện của các button
 
-    /**
-     * sự kiện click cho nút exit của base-modal
-     * author: nvthong ( 24/09/2020)
-     */
-    btnExitOnclick() {
-        this.hideBaseModal();
-    }
+
+    //#region các button trên toolbar
 
 
     /**
@@ -308,13 +305,139 @@ class baseJS {
         this.btnEditOnclick();
         this.state = 'add';
     }
+
+
+    /**
+    * sự kiện cho nút xóa - xóa bản ghi đã chọn trên table
+    * author: NVThong (03/10/2020)
+    * edit: NVThong (23/10/2020) - thêm chức năng xóa nhiều bản ghi cùng lúc
+    * */
+
+    btnDeleteOnclick() {
+        var self = this;
+        //lấy bản ghi cần xóa dữ liệu
+        var recordDeletes = $('#tbListData tr[class = tr-selected]');
+
+
+
+        var message;
+        if (recordDeletes.length == 0) {
+
+            this.showMessageError('Bạn Chưa chọn bản ghi cần xóa');
+            return;
+        }
+        else {
+            if (recordDeletes.length == 1) {
+                var className = $(tbListData).attr('detectName');
+                var name;
+                var td = recordDeletes.children();
+                $.each(td, function (index, item) {
+                    if ($(item).hasClass(className)) {
+                        name = $(item).text();
+                    }
+                })
+                message = `Bạn có chắc muốn xóa Nhân viên <<${name}>> không?`
+            } else {
+                message = 'Bạn có chắc chắn xóa những Nhân viên đã chọn không?'
+            }
+        }
+
+        // xác nhận lại việc xóa
+        this.showMessageConfirm(message, function () {
+            $.each(recordDeletes, function (index, record) {
+                // lấy id tương ứng với bản ghi
+                var idDeleteData = $(record).data('id');
+                // gửi id lên sever và xóa dữ liệu
+                var url = `${self.getUrlData()}/` + idDeleteData;
+                $.ajax({
+                    url: url,
+                    method: 'DELETE',
+
+                }).done(function (res) {
+
+                    $('#page-refresh').click();
+                    self.showSuccessMessage('Đã xóa thành công');
+
+                })
+            })
+
+        }, function () { });
+    }
+
+    /**
+     * xử lý sư kiện click cho nút sửa
+     * author: NVThong (02/10/2020)
+     * edit: NVThong ( 03/10/2020) - lấy id của bản ghi đã sửa
+     * edit : NVThong (08/10/2020) - dùng datepicker để gán dữ liệu dạng date
+     * */
+    //TODO: xử lý dữ liệu sau khi sửa
+    btnEditOnclick() {
+        this.state = 'edit';
+        var self = this;
+        //lấy bản ghi cần sửa dữ liệu
+        var urlData = this.getUrlData();
+        var recordEdit = $('#tbListData tr[class = tr-selected]');
+        //check số lượng bản ghi đã chọn
+        
+        if (recordEdit.length == 0) {
+            this.showMessageError('Bạn Chưa chọn bản ghi!');
+            return;
+        }
+        else if (recordEdit.length > 1) {
+            this.showMessageError('Bạn chỉ được chọn 1 bản ghi!');
+            return;
+        }
+        // lấy dữ liệu tương ứng với bản ghi
+        var idData = recordEdit.data('id');
+        $.ajax(
+            {
+                url: `${urlData}/${idData}`,
+                method: "GET",
+                contentType: "application/json"
+            }
+
+        ).done(function (response) {
+
+            //binding dữ liệu lên dialog để sửa 
+            var editData = response;
+            self.showBaseModal();
+            var fields = self.selectDialog();
+            $.each(fields, function (index, field) {
+                var fieldName = $(field).attr('name');
+
+                if ($(field).attr('type') == 'date') {
+
+                    var value;
+                    if (editData[fieldName]) value = editData[fieldName].replace(/(\d{4})-(\d{2})-(\d{2})\S+/, '$1-$2-$3');
+                    $(field).val(value);
+
+                }
+                else {
+                    var value = editData[fieldName];
+                    if ($(field).attr('type') == 'radio') {
+                        if ($(field).val() == value) {
+                            $(field).prop('checked', true);
+                        }
+                    } else {
+                        $(field).val(value);
+                    }
+
+                }
+            })
+        })
+        // lấy id của bản ghi đang sửa tương ứng trong data
+        this.idEditData = idData;
+    }
+
+    //#endregion
+
     //#region các nút phân trang
     /**
      * sự kiện click của nút first pages (điều hướng đến trang đầu tiên)
      * author: NVThong (23/10/2020)
      * */
     btnPageFirstOnClick() {
-        this.pagingData(0);
+        this.pagingData(1);
     }
     /**
      * sự kiện click của nút first pages (điều hướng đến trang đầu tiên)
@@ -322,6 +445,9 @@ class baseJS {
      * */
     btnPagePrevOnclick() {
         var pagePrev = parseInt($("#page-now").val(), 10);
+        if (pagePrev <= 1) return;
+
+
         this.pagingData(pagePrev - 1);
     }
 
@@ -330,8 +456,10 @@ class baseJS {
      * author: NVThong (23/10/2020)
      * */
     btnPageNextOnclick() {
-        var pagePrev = parseInt($("#page-now").val(), 10);
-        this.pagingData(pagePrev + 1);
+        var pageNext = parseInt($("#page-now").val(), 10);
+        var lastPage = parseInt($('#num-page').text(), 10);
+        if (pageNext >= lastPage) return;
+        this.pagingData(pageNext + 1);
     }
 
     /**
@@ -349,20 +477,28 @@ class baseJS {
      * */
     btnPageRefreshOnClick() {
         var page = parseInt($('#page-now').val(), 10);
-        $('#page-now').val(1);
+        var lastPage = parseInt($('#num-page').text(), 10);
+        if (page > lastPage) {
+            page = lastPage;
+            $('#page-now').val(lastPage);
+        }
+        else if (page < 1) {
+            page = 1;
+            $('#page-now').val(1);
+        }
         this.pagingData(page);
     }
 
     //#endregion
 
-
-
-
-
-
-    // #endregion
-
-    //#region Thêm thông tin khách hàng
+    //#region Các button trên dialog
+    /**
+    * sự kiện click cho nút exit của base-modal
+    * author: nvthong ( 24/09/2020)
+    */
+    btnExitOnclick() {
+        this.hideBaseModal();
+    }
 
 
     /**
@@ -376,7 +512,7 @@ class baseJS {
      * edit: NVThong( 08/10/2020 ) - Dùng datepicker để lấy dữ liệu dạng date
      * */
 
-    //TODO: thêm ID cho mỗi opject được thêm
+
     bttSaveOnClick() {
         var self = this;
         try {
@@ -444,16 +580,17 @@ class baseJS {
                     contentType: "application/json",
 
                 }).done(function (res) {
-                    self.loadData();
+
+                    $('#page-refresh').click();
                     self.hideBaseModal();
                     self.showSuccessMessage(`${notification} thành công!`);
 
                 }).fail(function (err) {
-                    debugger
+                    
                     var message = err.responseText.replace('System.Exception:', '');
                     var tmp = message.indexOf('\n');
                     message = message.slice(0, tmp);
-                    debugger
+                    
 
 
                     self.showMessageError(message);
@@ -476,6 +613,7 @@ class baseJS {
                 warningContent = warningContent.replace(/^(, )/, '');
                 warningContent += ' không được để trống.'
                 self.showMessageError(warningContent);
+                
             }
 
         }
@@ -483,126 +621,6 @@ class baseJS {
             console.log(err);
         }
 
-    }
-
-    /**
-    * sự kiện cho nút xóa - xóa bản ghi đã chọn trên table
-    * author: NVThong (03/10/2020)
-    * edit: NVThong (23/10/2020) - thêm chức năng xóa nhiều bản ghi cùng lúc
-    * */
-    btnDeleteOnclick() {
-        var self = this;
-        //lấy bản ghi cần xóa dữ liệu
-        var recordDeletes = $('#tbListData tr[class = tr-selected]');
-
-
-        
-        var message;
-        if (recordDeletes.length == 0) {
-
-            this.showMessageError('Bạn Chưa chọn bản ghi cần xóa');
-            return;
-        }
-        else {
-            if (recordDeletes.length == 1) {
-                var className = $(tbListData).attr('detectName');
-                var name;
-                var td = recordDeletes.children();
-                $.each(td, function (index, item) {
-                    if ($(item).hasClass(className)) {
-                        name = $(item).text();
-                    }
-                })
-                message = `Bạn có chắc muốn xóa Nhân viên <<${name}>> không?`
-            } else {
-                message = 'Bạn có chắc chắn xóa những Nhân viên đã chọn không?'
-            }
-        }
-
-        // xác nhận lại việc xóa
-        this.showMessageConfirm(message, function () {
-            $.each(recordDeletes, function (index, record) {
-                // lấy id tương ứng với bản ghi
-                var idDeleteData = $(record).data('id');
-                // gửi id lên sever và xóa dữ liệu
-                var url = `${self.getUrlData()}/` + idDeleteData;
-                $.ajax({
-                    url: url,
-                    method: 'DELETE',
-
-                }).done(function (res) {
-
-                    self.loadData();
-                    self.showSuccessMessage('Đã xóa thành công');
-
-                })
-            })
-
-        });
-    }
-
-    /**
-     * xử lý sư kiện click cho nút sửa
-     * author: NVThong (02/10/2020)
-     * edit: NVThong ( 03/10/2020) - lấy id của bản ghi đã sửa
-     * edit : NVThong (08/10/2020) - dùng datepicker để gán dữ liệu dạng date
-     * */
-    //TODO: xử lý dữ liệu sau khi sửa
-    btnEditOnclick() {
-        this.state = 'edit';
-        var self = this;
-        //lấy bản ghi cần sửa dữ liệu
-        var urlData = this.getUrlData();
-        var recordEdit = $('#tbListData tr[class = tr-selected]');
-       //check số lượng bản ghi đã chọn
-        if (recordEdit.length == 0) {
-            this.showMessageError('Bạn Chưa chọn bản ghi!');
-            return;
-        }
-        else if (recordEdit.length > 1) {
-            this.showMessageError('Bạn chỉ được chọn 1 bản ghi!');
-            return;
-        }
-         // lấy dữ liệu tương ứng với bản ghi
-        var idData = recordEdit.data('id');
-        $.ajax(
-            {
-                url: `${urlData}/${idData}`,
-                method: "GET",
-                contentType: "application/json"
-            }
-
-        ).done(function (response) {
-
-            //binding dữ liệu lên dialog để sửa 
-            var editData = response;
-            self.showBaseModal();
-            var fields = self.selectDialog();
-            $.each(fields, function (index, field) {
-                var fieldName = $(field).attr('name');
-
-                if ($(field).attr('type') == 'date') {
-
-                    var value;
-                    if (editData[fieldName]) value = editData[fieldName].replace(/(\d{4})-(\d{2})-(\d{2})\S+/, '$1-$2-$3');
-                    $(field).val(value);
-
-                }
-                else {
-                    var value = editData[fieldName];
-                    if ($(field).attr('type') == 'radio') {
-                        if ($(field).val() == value) {
-                            $(field).prop('checked', true);
-                        }
-                    } else {
-                        $(field).val(value);
-                    }
-
-                }
-            })
-        })
-        // lấy id của bản ghi đang sửa tương ứng trong data
-        this.idEditData = idData;
     }
 
     /**
@@ -632,8 +650,23 @@ class baseJS {
 
 
     //#endregion
+    // #endregion
 
-    //#region điều khiển cửa sổ dialog
+    //#region Điều khiển cửa sổ dialog
+    /**
+  * hiển thị thông báo success
+  * author: NVThong()26/10/2020
+  * @param {string} message nội dung thông báo
+  */
+    showSuccessMessage(message) {
+        
+        $('#success-label').text(message);
+        $('#message-success').show();
+        setTimeout(function () {
+            $('#message-success').hide();
+        }, 500)
+    }
+
 
     /**
      * hiển thị dialog thông tin chi tiết khách hàng
@@ -650,10 +683,13 @@ class baseJS {
      */
     hideBaseModal() {
         //lấy các input
-        var inputs = $('#base-of-customer input,select,textarea');
+        var inputs = $('#base-of-customer input,textarea');
 
         $.each(inputs, function (index, input) {
             // nếu là radio thì bỏ check
+            if ($(input).hasClass('required-error')) {
+                $(input).removeClass('required-error')
+            }
             if ($(input).attr('type') == 'radio') {
                 $(input).prop('checked', false);
             }
@@ -737,24 +773,15 @@ class baseJS {
         this.hideMessageError();
         return false;
     }
-    //#endregion
 
     /**
-     * hàm validate cho các ô nhập liệu có thuộc tính required khi blur
-     * author : nvthong ( 25/09/2020)
-     * 
-     */
+    * hàm validate cho các ô nhập liệu có thuộc tính required khi blur
+    * author : nvthong ( 25/09/2020)
+    * 
+    */
     validate() {
         validateForm.inputRequired(this);
     }
-
-    showSuccessMessage(message) {
-        debugger
-        $('#success-label').text(message);
-        $('#message-success').show();
-        setTimeout(function () {
-            $('#message-success').hide();
-        },1000)
-    }
+    //#endregion
 
 }

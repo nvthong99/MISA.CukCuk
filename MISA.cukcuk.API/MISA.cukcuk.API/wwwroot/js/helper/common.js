@@ -74,7 +74,10 @@ Number.prototype.formatPhoneNumber = function () {
     return this.replace(/(\d{3})(\d{3})(\d{3})/, '$1-$2-$3');// \d ~ các chữ số 0-9, {3} -> xuất hiện 3 lần
 }
 
-
+/**
+ * format dữ liệu.
+ * author: NVThong (24/10/2020)
+ * */
 var format = {
     currency: function (value) {
         value = value.toString().replace(/^0+/, '');

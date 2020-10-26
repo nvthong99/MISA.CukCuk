@@ -10,6 +10,7 @@ namespace MISA.cukcuk.Common.model
         /// id vị trí
         /// </summary>
         public Guid PossitionId { get; set; }
+
         /// <summary>
         /// tên vị trí
         /// </summary>

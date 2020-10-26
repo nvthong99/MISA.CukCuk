@@ -27,28 +27,28 @@ namespace MISA.cukcuk.DBAccess.interfaces
         /// </summary>
         /// author: NVThong (16/10/2020)
         /// <param name="entity">dữ liệu cần thêm</param>
-        /// <returns></returns>
+        /// <returns>true: thành công, false: thât bại</returns>
         bool Insert(T entity);
 
         /// <summary>
         /// xóa phần tử
         /// </summary>
         /// <param name="id">id của bản ghi cần xóa</param>
-        /// <returns></returns>
+        /// <returns>true: thành công, false: thât bại</returns>
         bool DeleteById(Guid id);
 
         /// <summary>
         ///sửa thông tin phần tử trên database
         /// </summary>
         /// <param name="entity"></param>
-        /// <returns></returns>
+        /// <returns>true: thành công, false: thât bại</returns>
         /// 
         bool Update(T entity);
 
         /// <summary>
         /// mã lớn nhất của đối tượng
         /// </summary>
-        /// <returns></returns>
+        /// <returns>giá trị mã lớn nhất</returns>
         string GetMaxCode();
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace MISA.cukcuk.DBAccess.interfaces
         /// </summary>
         /// <param name="maxRecord">số bản ghi tối đa trên 1 trang</param>
         /// <param name="recordBegin">bản ghi bắt đầu lấy </param>
-        /// <returns></returns>
+        /// <returns>danh sách đối tượng được giới hạn </returns>
         IEnumerable<T> GetEntityPaging(int maxRecord, int recordBegin);
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace MISA.cukcuk.DBAccess.interfaces
         /// </summary>
         /// <param name="fieldName">tên thuộc tính</param>
         /// <param name="value">giá trị của trường lưu thuộc tính</param>
-        /// <returns></returns>
+        /// <returns>trả về đối tượng có thuộc tính được truyền vào, null: không tìm thấy</returns>
         T CheckEntity(string storeName,string fieldName, object value);
         
     }

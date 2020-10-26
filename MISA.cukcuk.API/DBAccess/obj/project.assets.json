@@ -6070,19 +6070,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Thong\\.nuget\\packages\\": {}
+    "C:\\Users\\NVThong\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj",
+      "projectUniqueName": "C:\\Users\\NVThong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj",
       "projectName": "MISA.cukcuk.DBAccess",
-      "projectPath": "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj",
-      "packagesPath": "C:\\Users\\Thong\\.nuget\\packages\\",
-      "outputPath": "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\DBAccess\\obj\\",
+      "projectPath": "C:\\Users\\NVThong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\DBAccess\\MISA.cukcuk.DBAccess.csproj",
+      "packagesPath": "C:\\Users\\NVThong\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NVThong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\DBAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Thong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\NVThong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6095,8 +6095,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
-              "projectPath": "W:\\WEB2020_09_NVTHONG\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
+            "C:\\Users\\NVThong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj": {
+              "projectPath": "C:\\Users\\NVThong\\Documents\\MISA.CukCuk\\MISA.cukcuk.API\\Common\\MISA.cukcuk.Common.csproj"
             }
           }
         }
@@ -6134,7 +6134,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

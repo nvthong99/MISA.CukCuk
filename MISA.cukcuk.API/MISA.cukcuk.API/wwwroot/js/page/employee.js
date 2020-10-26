@@ -40,6 +40,7 @@ class EmployeeJS extends baseJS {
      * author: nvthong(30/09/2020)
      * */
     selectDialog() {
+        
        
         return $('#dialog-employee input,select,textarea');
     }
@@ -48,14 +49,30 @@ class EmployeeJS extends baseJS {
         // hiển thị dialog chi tiết
         super.btnAddOnclick();
         // lấy mã số nhân viên lớn nhất từ sevice
+        this.bindingNextCode();
+        
+    }
 
+    btnCopyOnClick() {
+        
+        super.btnCopyOnClick();
+        this.bindingNextCode();
+    }
+    /**
+     * binding mã nhân viên tiếp theo
+     * author: NVThong (26/10/2020)
+     * 
+     * */
+    bindingNextCode() {
+        
         $.ajax({
+            
             url: '/api/Employee/employee-max-code',
             method: "GET",
             contentType: "application/json",
 
         }).done(function (res) {
-            var num = res.replaceAll(/\D/g, ''); // bỏ hết ký tự khôn phải số
+            var num = res.replaceAll(/\D/g, ''); // bỏ hết ký tự không phải số
 
             var maxCode = parseInt(num, 10); // chuyển về number
             maxCode += 1;
@@ -67,8 +84,9 @@ class EmployeeJS extends baseJS {
             }
             $('#employee-code').val('NV' + value);
         })
-        //gán vào input
     }
+
+
     /**
      * biding dữ liệu cho các select
      * @param {any} selector id của ô select
