@@ -86,7 +86,7 @@ namespace MISA.cukcuk.Common.model
         /// <summary>
         /// mã số thuế
         /// </summary>
-        public string? Taxcode { get; set; }
+        public string? TaxCode { get; set; }
         /// <summary>
         /// tiền lương
         /// </summary>

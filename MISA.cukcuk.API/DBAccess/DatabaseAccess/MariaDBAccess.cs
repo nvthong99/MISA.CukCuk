@@ -59,7 +59,6 @@ namespace MISA.cukcuk.API.DatabaseAccess
             var entity = Activator.CreateInstance<T>();
             while (mySqlDataReader.Read())
             {
-
                 
                 for (int i = 0; i < mySqlDataReader.FieldCount; i++)
                 {
@@ -71,7 +70,6 @@ namespace MISA.cukcuk.API.DatabaseAccess
                         propertyInfo.SetValue(entity, value);
                     }
                 }
-               
             }
             _mySqlConnection.Close();
             return entity;
